@@ -187,19 +187,44 @@
         .troubleshoot-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
         .troubleshoot-desc { font-size: 0.9rem; color: var(--gray-text); line-height: 1.7; }
 
-        /* CTA */
-        .cta { text-align: center; padding: 80px 24px 100px; }
-        .cta h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 900; margin-bottom: 16px; }
-        .cta p { color: var(--gray-text); font-size: 1.1rem; margin-bottom: 32px; }
-        .btn {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: var(--gradient); color: var(--white);
-            padding: 16px 32px; border-radius: 50px; text-decoration: none;
-            font-weight: 700; font-size: 1.05rem;
+        /* Contact Form */
+        .form-section { padding: 80px 24px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+        .form-wrapper { max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; color: var(--white); }
+        .form-input, .form-select, .form-textarea {
+            width: 100%; padding: 14px 16px; background: var(--dark-card);
+            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px;
+            color: var(--white); font-family: inherit; font-size: 0.95rem;
+            transition: border-color 0.2s;
+        }
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none; border-color: var(--teal);
+        }
+        .form-input::placeholder, .form-textarea::placeholder { color: rgba(148, 163, 184, 0.5); }
+        .form-select { cursor: pointer; -webkit-appearance: none; appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat; background-position: right 16px center;
+        }
+        .form-select option { background: var(--dark-card); color: var(--white); }
+        .form-textarea { min-height: 140px; resize: vertical; }
+        .form-submit {
+            width: 100%; padding: 16px; background: var(--gradient); color: var(--white);
+            border: none; border-radius: 50px; font-family: inherit;
+            font-size: 1.05rem; font-weight: 700; cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(29, 192, 191, 0.3); }
-        .btn svg { width: 20px; height: 20px; }
+        .form-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(29, 192, 191, 0.3); }
+        .form-note { text-align: center; margin-top: 16px; font-size: 0.8rem; color: var(--gray-text); }
+        .form-success {
+            display: none; text-align: center; padding: 40px 24px;
+            background: var(--dark-card); border: 1px solid rgba(29, 192, 191, 0.2);
+            border-radius: 16px;
+        }
+        .form-success.show { display: block; }
+        .form-success .check { font-size: 3rem; margin-bottom: 16px; }
+        .form-success h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; }
+        .form-success p { color: var(--gray-text); font-size: 0.95rem; }
 
         /* Footer */
         footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 48px 24px; }
@@ -387,14 +412,37 @@
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta">
-        <h2>Still Need Help?</h2>
-        <p>Reach out directly and we'll get back to you as soon as possible.</p>
-        <a href="mailto:sugrowth+scrolloff@gmail.com" class="btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            Email Us
-        </a>
+    <!-- Contact Form -->
+    <section class="form-section">
+        <div class="faq-header">
+            <div class="section-label">Get in Touch</div>
+            <h2 class="section-title">Send Us a Message</h2>
+            <p style="color: var(--gray-text); margin-top: 12px; font-size: 0.95rem;">Fill out the form below and it'll be submitted as a GitHub issue — we'll respond there.</p>
+        </div>
+        <div class="form-wrapper">
+            <form id="supportForm">
+                <div class="form-group">
+                    <label class="form-label" for="issueType">What's this about?</label>
+                    <select class="form-select" id="issueType" required>
+                        <option value="" disabled selected>Choose a category...</option>
+                        <option value="bug">Bug Report</option>
+                        <option value="feature">Feature Request</option>
+                        <option value="question">General Question</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="issueTitle">Subject</label>
+                    <input class="form-input" type="text" id="issueTitle" placeholder="Brief summary of your message" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="issueBody">Description</label>
+                    <textarea class="form-textarea" id="issueBody" placeholder="Tell us more — the details help us help you faster." required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Submit to GitHub</button>
+                <p class="form-note">This opens a pre-filled GitHub issue. You can review it before submitting.</p>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -409,9 +457,11 @@
                 <div class="footer-version">v1.4-b2</div>
             </div>
             <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="support.html">Support</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Use</a>
-                <a href="https://github.com/sugrowth/ScrollOff-Public/issues" target="_blank">Support</a>
                 <a href="mailto:sugrowth+scrolloff@gmail.com">Contact</a>
                 <a href="https://github.com/sugrowth/ScrollOff-Public" target="_blank">GitHub</a>
             </div>
@@ -435,6 +485,31 @@
                 document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
                 if (!wasOpen) item.classList.add('open');
             });
+        });
+
+        // Support form → GitHub issue
+        document.getElementById('supportForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const type = document.getElementById('issueType').value;
+            const title = document.getElementById('issueTitle').value.trim();
+            const body = document.getElementById('issueBody').value.trim();
+
+            if (!type || !title || !body) return;
+
+            const labels = { bug: 'bug', feature: 'enhancement', question: 'question', feedback: 'feedback' };
+            const prefixes = { bug: '[Bug]', feature: '[Feature]', question: '[Question]', feedback: '[Feedback]' };
+
+            const issueTitle = encodeURIComponent(prefixes[type] + ' ' + title);
+            const issueBody = encodeURIComponent(body + '\n\n---\n_Submitted via scrolloff.app/support_');
+            const label = labels[type] || '';
+
+            const url = 'https://github.com/sugrowth/ScrollOff-Public/issues/new'
+                + '?title=' + issueTitle
+                + '&body=' + issueBody
+                + (label ? '&labels=' + label : '');
+
+            window.open(url, '_blank');
         });
     </script>
 </body>
