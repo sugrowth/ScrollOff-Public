@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — ScrollOff | Our Mission to End Doom Scrolling</title>
-    <meta name="description" content="ScrollOff was built because screen time apps kept getting it wrong. Instead of punishing you, we reward your focus. Learn about the mission behind guilt-free scroll time.">
-    <meta name="keywords" content="about scrolloff, scrolloff mission, screen time app story, digital wellness mission, sugrowth, who made scrolloff">
+    <title>About — ScrollOff | A Sugrowth Product</title>
+    <meta name="description" content="ScrollOff is a product by Sugrowth — a company building tools for meaningful personal growth. Learn about our mission, team, and why we built ScrollOff.">
+    <meta name="keywords" content="about scrolloff, sugrowth, scrolloff mission, screen time app story, digital wellness mission, karan garg, who made scrolloff, sugrowth company">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="About ScrollOff — Our Mission to End Doom Scrolling">
-    <meta property="og:description" content="Screen time apps kept getting it wrong. ScrollOff rewards your focus instead of punishing your habits. Learn why we built it.">
+    <meta property="og:title" content="About ScrollOff — A Sugrowth Product">
+    <meta property="og:description" content="ScrollOff is 100% ad-free. We'd rather help you reclaim time than sell your attention. Learn about the mission behind guilt-free scroll time.">
     <meta property="og:image" content="https://raw.githubusercontent.com/sugrowth/ScrollOff-Public/main/assets/app-icon.png">
     <meta property="og:url" content="https://scrolloff.app/about.html">
     <meta property="og:type" content="website">
@@ -17,8 +17,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About ScrollOff — Our Mission to End Doom Scrolling">
-    <meta name="twitter:description" content="Screen time apps kept getting it wrong. ScrollOff rewards your focus instead of punishing your habits.">
+    <meta name="twitter:title" content="About ScrollOff — A Sugrowth Product">
+    <meta name="twitter:description" content="ScrollOff is 100% ad-free. We'd rather help you reclaim time than sell your attention.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/sugrowth/ScrollOff-Public/main/assets/app-icon.png">
 
     <!-- Additional SEO -->
@@ -38,7 +38,7 @@
         "@context": "https://schema.org",
         "@type": "AboutPage",
         "name": "About ScrollOff",
-        "description": "Learn about ScrollOff's mission to replace punishment-based screen time management with a reward-based system that actually works.",
+        "description": "ScrollOff is a product by Sugrowth, building tools for meaningful personal growth. 100% ad-free, 100% private.",
         "url": "https://scrolloff.app/about.html",
         "isPartOf": {
             "@type": "WebSite",
@@ -255,7 +255,7 @@
 
         /* Hero */
         .hero {
-            padding: 140px 24px 80px;
+            padding: 140px 24px 60px;
             text-align: center;
         }
 
@@ -280,7 +280,6 @@
             margin: 0 auto;
         }
 
-        /* Back link */
         .back-link {
             display: inline-flex;
             align-items: center;
@@ -294,6 +293,39 @@
 
         .back-link:hover {
             text-decoration: underline;
+        }
+
+        /* App Identity Card */
+        .app-identity {
+            text-align: center;
+            padding: 40px 24px 60px;
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .app-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .app-tagline {
+            font-size: 1rem;
+            color: var(--teal);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .app-by {
+            font-size: 0.8rem;
+            color: var(--gray-text);
+            opacity: 0.7;
         }
 
         /* Story Sections */
@@ -339,6 +371,83 @@
             color: var(--white);
         }
 
+        /* Promise Card */
+        .promise-card {
+            background: linear-gradient(135deg, rgba(29, 192, 191, 0.08) 0%, rgba(11, 127, 149, 0.04) 100%);
+            border: 1px solid rgba(29, 192, 191, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            margin-top: 24px;
+        }
+
+        .promise-card p {
+            font-size: 1.05rem;
+            color: var(--gray-text);
+            line-height: 1.8;
+        }
+
+        .promise-card strong {
+            color: var(--white);
+        }
+
+        /* Company Section */
+        .company-card {
+            background: var(--dark-card);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 32px;
+        }
+
+        .company-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .company-logo {
+            width: 56px;
+            height: 56px;
+            background: rgba(29, 192, 191, 0.1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--teal);
+        }
+
+        .company-name {
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .company-meaning {
+            font-size: 0.85rem;
+            color: var(--teal);
+        }
+
+        .product-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(29, 192, 191, 0.1);
+            border: 1px solid rgba(29, 192, 191, 0.2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--teal);
+            margin-top: 20px;
+        }
+
+        .product-badge img {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
         /* Values Grid */
         .values-grid {
             display: grid;
@@ -356,8 +465,15 @@
         }
 
         .value-icon {
-            font-size: 2rem;
-            margin-bottom: 16px;
+            width: 48px;
+            height: 48px;
+            background: rgba(29, 192, 191, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin: 0 auto 16px;
         }
 
         .value-title {
@@ -370,6 +486,77 @@
             font-size: 0.9rem;
             color: var(--gray-text);
             line-height: 1.6;
+        }
+
+        /* Team Section */
+        .team-card {
+            background: var(--dark-card);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 32px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .team-avatar {
+            width: 72px;
+            height: 72px;
+            min-width: 72px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--dark);
+        }
+
+        .team-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .team-role {
+            font-size: 0.85rem;
+            color: var(--teal);
+            margin-bottom: 8px;
+        }
+
+        .team-desc {
+            font-size: 0.9rem;
+            color: var(--gray-text);
+            line-height: 1.6;
+        }
+
+        /* Tech Stack */
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .tech-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--dark-card);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--gray-text);
+        }
+
+        .tech-badge .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--teal);
+            border-radius: 50%;
         }
 
         /* Timeline */
@@ -422,6 +609,46 @@
 
         .timeline-desc {
             font-size: 0.9rem;
+            color: var(--gray-text);
+        }
+
+        /* Links Section */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .link-card {
+            background: var(--dark-card);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: var(--white);
+            transition: border-color 0.2s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .link-card:hover {
+            border-color: rgba(29, 192, 191, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .link-icon {
+            font-size: 1.2rem;
+        }
+
+        .link-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .link-sub {
+            font-size: 0.75rem;
             color: var(--gray-text);
         }
 
@@ -546,6 +773,20 @@
                 grid-template-columns: 1fr;
             }
 
+            .team-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .company-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+
             .footer-inner {
                 flex-direction: column;
                 gap: 24px;
@@ -601,45 +842,102 @@
     <!-- Hero -->
     <section class="hero">
         <a href="index.html" class="back-link">&larr; Back to Home</a>
-        <h1>Built Because <span class="gradient">We Were Tired Too</span></h1>
-        <p>We believe that technology should enhance our lives, not consume them. ScrollOff was created to help people develop healthier relationships with their devices and reclaim time for what truly matters.</p>
+        <h1>About <span class="gradient">ScrollOff</span></h1>
+        <p>A product by Sugrowth, building tools for meaningful personal growth.</p>
     </section>
 
-    <!-- Our Mission -->
+    <!-- App Identity -->
+    <section class="app-identity">
+        <img src="assets/app-icon.png" alt="ScrollOff App Icon" class="app-icon">
+        <div class="app-name">ScrollOff</div>
+        <div class="app-tagline">Guilt-Free Scroll Time</div>
+        <div class="app-by">by Sugrowth</div>
+    </section>
+
+    <!-- Our Promise -->
     <section class="story-section">
         <div class="story-content">
-            <span class="story-label">Our Mission</span>
-            <h2 class="story-title">Technology Should Enhance Your Life</h2>
+            <span class="story-label">Our Promise</span>
+            <h2 class="story-title">100% Ad-Free. Always.</h2>
             <p class="story-text">
-                ScrollOff is an iOS app designed to help you break free from endless scrolling and reclaim your most valuable resource: <strong>time</strong>. Instead of punishing you with hard limits and shame notifications, we built a reward-based system where you earn guilt-free scroll time by staying focused.
+                ScrollOff is <strong>100% ad-free on every tier, even Free</strong>. We would rather help you reclaim time than sell your attention.
             </p>
             <p class="story-text">
-                Every screen time app follows the same broken playbook: set a limit, hit the limit, feel guilty. Tap "Ignore Limit" because you need to reply to that message. Feel even more guilty. Repeat until you delete the app entirely.
+                Other apps shame you for using them. We reward you for staying away, so when you do use them, <strong>you've earned it</strong>.
             </p>
-            <p class="story-text">
-                The problem was never you. <strong>The problem was the approach.</strong>
-            </p>
+            <div class="promise-card">
+                <p>
+                    Earn time by staying away. Use your apps without guilt. <strong>You earned it. Enjoy it.</strong> That's the ScrollOff promise.
+                </p>
+            </div>
         </div>
     </section>
 
-    <!-- About Sugrowth -->
+    <!-- Sugrowth - The Company -->
     <section class="story-section">
         <div class="story-content">
-            <span class="story-label">Who We Are</span>
-            <h2 class="story-title">Sugrowth &mdash; Building Tools for Personal Growth</h2>
+            <span class="story-label">The Company</span>
+            <h2 class="story-title">Sugrowth: Su (Good) + Growth</h2>
             <p class="story-text">
-                Sugrowth is building tools for personal growth and productivity. ScrollOff is our flagship product, born from the belief that <strong>positive reinforcement creates lasting habits</strong> where punishment-based approaches consistently fail.
+                <strong>Sugrowth</strong> stands for <strong>Super Growth</strong>. In Hindi, <strong>Su (&#x0938;&#x0941;)</strong> means <em>good</em> or <em>excellent</em>, making it literally <strong>"Good Growth"</strong>. We build products that help people grow, whether that's reclaiming their time, building better habits, or unlocking their potential.
             </p>
             <p class="story-text">
-                Built natively with <strong>SwiftUI</strong> and <strong>Apple's Screen Time API</strong>, ScrollOff processes everything locally on your device. No servers. No accounts. No analytics. No tracking. We literally cannot see your data, even if we wanted to.
+                Sugrowth is a technology company focused on building tools that drive meaningful personal and business growth. We believe technology should enhance lives, not consume them. Every product we build is designed to help people develop healthier habits and reclaim time for what truly matters.
             </p>
-            <p class="story-text">
-                ScrollOff is designed for individual self-management &mdash; not parental control. Users voluntarily choose which apps to block on their own device, and earn credits by staying focused that they can spend on guilt-free peek sessions whenever they choose.
-            </p>
+
+            <div class="company-card">
+                <div class="company-header">
+                    <div class="company-logo">S</div>
+                    <div>
+                        <div class="company-name">Sugrowth</div>
+                        <div class="company-meaning">Building tools for super growth</div>
+                    </div>
+                </div>
+                <p class="story-text" style="margin-bottom: 0;">
+                    ScrollOff is Sugrowth's flagship product, born from the belief that <strong>positive reinforcement creates lasting habits</strong> where punishment-based approaches consistently fail.
+                </p>
+                <div class="product-badge">
+                    <img src="assets/app-icon.png" alt="ScrollOff">
+                    ScrollOff: Flagship Product
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Our Values -->
+    <!-- How It Works -->
+    <section class="story-section">
+        <div class="story-content">
+            <span class="story-label">The App</span>
+            <h2 class="story-title">How ScrollOff Works</h2>
+            <p class="story-text">
+                ScrollOff helps you <strong>earn your screen time</strong>. Instead of mindlessly opening apps, you earn time credits by staying focused, then spend those credits when you actually want to browse. It turns screen time into a conscious choice, not a reflex.
+            </p>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">&#x1F3AF;</div>
+                    <h3 class="value-title">Choose Apps to Block</h3>
+                    <p class="value-desc">Pick the apps that distract you most: social media, games, streaming, whatever your weakness is.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">&#x23F3;</div>
+                    <h3 class="value-title">Earn Credits</h3>
+                    <p class="value-desc">5 minutes earned per hour of staying focused. Your discipline becomes currency.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">&#x2728;</div>
+                    <h3 class="value-title">Spend Guilt-Free</h3>
+                    <p class="value-desc">Spend your earned credits for a timed peek. No guilt. No shame. You earned it.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">&#x1F4CA;</div>
+                    <h3 class="value-title">Track Progress</h3>
+                    <p class="value-desc">See your patterns improve over time with 7-day or 30-day usage insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Believe -->
     <section class="story-section">
         <div class="story-content">
             <span class="story-label">What We Believe</span>
@@ -653,11 +951,11 @@
                 <div class="value-card">
                     <div class="value-icon">&#x1F512;</div>
                     <h3 class="value-title">Privacy Is Non-Negotiable</h3>
-                    <p class="value-desc">100% on-device processing. No accounts, no servers, no tracking. Uses Apple's secure Screen Time API.</p>
+                    <p class="value-desc">100% on-device processing. No accounts, no servers, no tracking. We literally cannot see your data.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">&#x1F91D;</div>
-                    <h3 class="value-title">Self-Accountability, Not Control</h3>
+                    <h3 class="value-title">Self-Accountability</h3>
                     <p class="value-desc">Not parental control. ScrollOff is for adults who want to manage their own screen time on their own terms.</p>
                 </div>
                 <div class="value-card">
@@ -669,33 +967,41 @@
         </div>
     </section>
 
-    <!-- What ScrollOff Offers -->
+    <!-- Team -->
     <section class="story-section">
         <div class="story-content">
-            <span class="story-label">The App</span>
-            <h2 class="story-title">What Makes ScrollOff Different</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">&#x23F0;</div>
-                    <h3 class="value-title">Earn Guilt-Free Time</h3>
-                    <p class="value-desc">Earn time credits by staying off blocked apps, then spend them when you want access. No guilt, just earned time.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">&#x1F6AB;</div>
-                    <h3 class="value-title">No-Go Zones</h3>
-                    <p class="value-desc">Schedule ultra-strict blocking periods for sleep, deep work, or family time. Zero access, zero exceptions.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">&#x1F3C6;</div>
-                    <h3 class="value-title">Focus Challenges</h3>
-                    <p class="value-desc">Gamified 1-12 hour focus sessions that earn bonus credits. Track your winning streaks and build discipline.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">&#x1F4DD;</div>
-                    <h3 class="value-title">Notes to Self</h3>
-                    <p class="value-desc">If-then implementation intentions for habit building. When urges hit, your counter-move is ready.</p>
+            <span class="story-label">The Team</span>
+            <h2 class="story-title">Who's Behind ScrollOff</h2>
+            <div class="team-card">
+                <div class="team-avatar">K</div>
+                <div>
+                    <div class="team-name">Karan Garg</div>
+                    <div class="team-role">Founder & Lead Developer</div>
+                    <p class="team-desc">Creator of ScrollOff and founder of Sugrowth. Building tools that help people develop healthier relationships with their devices and reclaim time for what truly matters.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Technology -->
+    <section class="story-section">
+        <div class="story-content">
+            <span class="story-label">Built With</span>
+            <h2 class="story-title">Technology Stack</h2>
+            <p class="story-text">
+                Built natively with <strong>SwiftUI</strong> and <strong>Apple's Screen Time API</strong>, ScrollOff processes everything locally on your device. No servers. No accounts. No analytics. No tracking.
+            </p>
+            <div class="tech-grid">
+                <span class="tech-badge"><span class="dot"></span> SwiftUI</span>
+                <span class="tech-badge"><span class="dot"></span> Swift 5.9+</span>
+                <span class="tech-badge"><span class="dot"></span> SwiftData</span>
+                <span class="tech-badge"><span class="dot"></span> Screen Time API</span>
+                <span class="tech-badge"><span class="dot"></span> StoreKit 2</span>
+                <span class="tech-badge"><span class="dot"></span> Combine</span>
+            </div>
+            <p class="story-text" style="margin-top: 24px;">
+                <strong>Android coming soon</strong>, built with Jetpack Compose, Kotlin Multiplatform, and Material 3.
+            </p>
         </div>
     </section>
 
@@ -708,7 +1014,7 @@
                 <div class="timeline-item">
                     <div class="timeline-date">October 2025</div>
                     <h3 class="timeline-title">Public Launch</h3>
-                    <p class="timeline-desc">ScrollOff goes live on the App Store and the public documentation repository launches on GitHub, built with SwiftUI and Apple's Screen Time API.</p>
+                    <p class="timeline-desc">ScrollOff goes live on the App Store and the public documentation repository launches on GitHub.</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">Late 2025</div>
@@ -717,9 +1023,47 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">2026</div>
-                    <h3 class="timeline-title">Growing &amp; Improving</h3>
+                    <h3 class="timeline-title">Growing & Improving</h3>
                     <p class="timeline-desc">Now at v1.4-b2. Continuing to refine the experience based on user feedback, with Android support on the horizon.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect -->
+    <section class="story-section">
+        <div class="story-content">
+            <span class="story-label">Connect</span>
+            <h2 class="story-title">Get In Touch</h2>
+            <div class="links-grid">
+                <a href="https://scrolloff.app" class="link-card">
+                    <span class="link-icon">&#x1F310;</span>
+                    <div>
+                        <div class="link-label">Website</div>
+                        <div class="link-sub">scrolloff.app</div>
+                    </div>
+                </a>
+                <a href="https://github.com/sugrowth/ScrollOff-Public" target="_blank" class="link-card">
+                    <span class="link-icon">&#x1F4BB;</span>
+                    <div>
+                        <div class="link-label">GitHub</div>
+                        <div class="link-sub">Public docs & issues</div>
+                    </div>
+                </a>
+                <a href="mailto:sugrowth+scrolloff@gmail.com" class="link-card">
+                    <span class="link-icon">&#x2709;&#xFE0F;</span>
+                    <div>
+                        <div class="link-label">Contact Support</div>
+                        <div class="link-sub">sugrowth+scrolloff@gmail.com</div>
+                    </div>
+                </a>
+                <a href="https://github.com/sugrowth/ScrollOff-Public/issues/new" target="_blank" class="link-card">
+                    <span class="link-icon">&#x1F41B;</span>
+                    <div>
+                        <div class="link-label">Report an Issue</div>
+                        <div class="link-sub">Bug reports & feature requests</div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -730,8 +1074,18 @@
         <p>Download ScrollOff for free and start earning guilt-free scroll time.</p>
         <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="btn" target="_blank">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-            Download for iOS — It's Free
+            Download for iOS. It's Free
         </a>
+    </section>
+
+    <!-- Acknowledgments -->
+    <section class="story-section" style="text-align: center; padding: 40px 24px;">
+        <p style="font-size: 0.85rem; color: var(--gray-text);">
+            Built with SwiftUI and love for productivity by the Sugrowth team.
+        </p>
+        <p style="font-size: 0.8rem; color: var(--gray-text); margin-top: 8px;">
+            &copy; 2025&ndash;2026 Sugrowth. All rights reserved.
+        </p>
     </section>
 
     <!-- Footer -->

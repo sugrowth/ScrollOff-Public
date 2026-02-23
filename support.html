@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support — ScrollOff | Help &amp; Contact</title>
-    <meta name="description" content="Get help with ScrollOff. Browse common questions, troubleshooting guides, and contact options. We're here to help you get the most out of your screen time management.">
-    <meta name="keywords" content="scrolloff support, scrolloff help, scrolloff contact, screen time app help, scrolloff troubleshooting, scrolloff faq">
+    <title>Support — ScrollOff | Help &amp; FAQ</title>
+    <meta name="description" content="Get help with ScrollOff. Browse frequently asked questions about earning time, tiers, No-Go Zone, trends, data tools and more.">
+    <meta name="keywords" content="scrolloff support, scrolloff help, scrolloff faq, screen time app help, scrolloff troubleshooting, scrolloff earning time">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="ScrollOff Support — Help & Contact">
-    <meta property="og:description" content="Get help with ScrollOff. Browse common questions, troubleshooting guides, and contact options.">
+    <meta property="og:title" content="ScrollOff Support — Help & FAQ">
+    <meta property="og:description" content="Get help with ScrollOff. Browse frequently asked questions about earning time, tiers, No-Go Zone, trends, and more.">
     <meta property="og:image" content="https://raw.githubusercontent.com/sugrowth/ScrollOff-Public/main/assets/app-icon.png">
     <meta property="og:url" content="https://scrolloff.app/support.html">
     <meta property="og:type" content="website">
@@ -17,8 +17,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ScrollOff Support — Help & Contact">
-    <meta name="twitter:description" content="Get help with ScrollOff. Browse common questions, troubleshooting guides, and contact options.">
+    <meta name="twitter:title" content="ScrollOff Support — Help & FAQ">
+    <meta name="twitter:description" content="Get help with ScrollOff. Browse frequently asked questions about earning time, tiers, No-Go Zone, trends, and more.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/sugrowth/ScrollOff-Public/main/assets/app-icon.png">
 
     <!-- Additional SEO -->
@@ -32,19 +32,40 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
-    <!-- Schema.org Structured Data -->
+    <!-- Schema.org FAQPage -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "ScrollOff Support",
-        "description": "Get help with ScrollOff. Browse common questions, troubleshooting guides, and contact options.",
+        "@type": "FAQPage",
+        "name": "ScrollOff Support & FAQ",
+        "description": "Frequently asked questions about ScrollOff screen time management app.",
         "url": "https://scrolloff.app/support.html",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "ScrollOff",
-            "url": "https://scrolloff.app"
-        }
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I earn time in ScrollOff?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You earn 5 minutes of screen time for every hour you stay focused and away from your protected apps. Daily earning caps: Free 45 minutes, Premium 90 minutes, Pro 120 minutes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is No-Go Zone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No-Go Zone is the strictest mode. Once activated, you cannot access your protected apps until the timer ends. Minimum durations: Free 8 hours, Premium 4 hours, Pro 2 hours."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my data safe with ScrollOff?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ScrollOff processes everything locally on your device. No servers, no accounts, no analytics, no tracking. Your data never leaves your phone."
+                }
+            }
+        ]
     }
     </script>
 
@@ -122,35 +143,9 @@
         .hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; letter-spacing: -1px; margin-bottom: 16px; }
         .hero h1 .gradient { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .hero p { font-size: 1.1rem; color: var(--gray-text); max-width: 600px; margin: 0 auto; }
-        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--teal); text-decoration: none; font-size: 0.9rem; font-weight: 500; margin-bottom: 40px; }
-        .back-link:hover { text-decoration: underline; }
-
-        /* Contact Cards */
-        .contact-section { padding: 0 24px 80px; }
-
-        .contact-grid {
-            max-width: 900px; margin: 0 auto;
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;
-        }
-
-        .contact-card {
-            background: var(--dark-card); border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 16px; padding: 32px; text-align: center;
-            transition: border-color 0.2s, transform 0.2s;
-        }
-        .contact-card:hover { border-color: rgba(29, 192, 191, 0.2); transform: translateY(-2px); }
-        .contact-icon { font-size: 2rem; margin-bottom: 16px; }
-        .contact-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
-        .contact-desc { font-size: 0.9rem; color: var(--gray-text); line-height: 1.6; margin-bottom: 20px; }
-        .contact-link {
-            display: inline-block; color: var(--teal); text-decoration: none;
-            font-size: 0.9rem; font-weight: 600; transition: opacity 0.2s;
-        }
-        .contact-link:hover { text-decoration: underline; }
 
         /* FAQ Section */
-        .faq-section { padding: 80px 24px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
-
+        .faq-section { padding: 0 24px 80px; }
         .faq-header { text-align: center; margin-bottom: 48px; }
         .section-label {
             display: inline-block; font-size: 0.75rem; font-weight: 700;
@@ -159,6 +154,12 @@
         .section-title { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 900; letter-spacing: -0.5px; }
 
         .faq-list { max-width: 700px; margin: 0 auto; }
+
+        .faq-category-label {
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 2px; color: var(--teal); margin: 36px 0 12px; padding-left: 4px;
+        }
+        .faq-category-label:first-child { margin-top: 0; }
 
         .faq-item {
             border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px;
@@ -170,12 +171,21 @@
             color: var(--white); font-family: inherit; font-size: 1rem; font-weight: 600;
             text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
         }
-        .faq-question .icon { color: var(--teal); font-size: 1.25rem; transition: transform 0.3s; }
+        .faq-question:hover { color: var(--teal-muted); }
+        .faq-question .icon { color: var(--teal); font-size: 1.25rem; transition: transform 0.3s; flex-shrink: 0; margin-left: 12px; }
         .faq-item.open .faq-question .icon { transform: rotate(45deg); }
 
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-        .faq-item.open .faq-answer { max-height: 500px; }
-        .faq-answer p { padding: 0 24px 20px; color: var(--gray-text); font-size: 0.95rem; line-height: 1.7; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-answer-content { padding: 0 24px 20px; }
+        .faq-answer-content p { color: var(--gray-text); font-size: 0.95rem; line-height: 1.7; margin-bottom: 12px; }
+        .faq-answer-content p:last-child { margin-bottom: 0; }
+        .faq-answer-content strong { color: var(--white); font-weight: 600; }
+        .faq-answer-content ul, .faq-answer-content ol {
+            color: var(--gray-text); font-size: 0.95rem; line-height: 1.7;
+            margin: 0 0 12px 20px; padding: 0;
+        }
+        .faq-answer-content li { margin-bottom: 4px; }
+        .faq-answer-content ol { list-style: decimal; }
 
         /* Troubleshooting */
         .troubleshoot-section { padding: 80px 24px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
@@ -216,15 +226,6 @@
         }
         .form-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(29, 192, 191, 0.3); }
         .form-note { text-align: center; margin-top: 16px; font-size: 0.8rem; color: var(--gray-text); }
-        .form-success {
-            display: none; text-align: center; padding: 40px 24px;
-            background: var(--dark-card); border: 1px solid rgba(29, 192, 191, 0.2);
-            border-radius: 16px;
-        }
-        .form-success.show { display: block; }
-        .form-success .check { font-size: 3rem; margin-bottom: 16px; }
-        .form-success h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; }
-        .form-success p { color: var(--gray-text); font-size: 0.95rem; }
 
         /* Footer */
         footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 48px 24px; }
@@ -241,7 +242,6 @@
         @media (max-width: 768px) {
             .nav-links a:not(.nav-cta) { display: none; }
             .hero h1 { font-size: 1.75rem; }
-            .contact-grid { grid-template-columns: 1fr; }
             .footer-inner { flex-direction: column; gap: 24px; text-align: center; }
             .footer-links { flex-wrap: wrap; justify-content: center; gap: 24px; }
             .footer-left { align-items: center; }
@@ -284,33 +284,8 @@
 
     <!-- Hero -->
     <section class="hero">
-        <a href="index.html" class="back-link">&larr; Back to Home</a>
         <h1>How Can We <span class="gradient">Help?</span></h1>
-        <p>Find answers to common questions, troubleshooting tips, and ways to reach us. We're here for you.</p>
-    </section>
-
-    <!-- Contact Options -->
-    <section class="contact-section">
-        <div class="contact-grid">
-            <div class="contact-card">
-                <div class="contact-icon">&#x1F4E7;</div>
-                <h2 class="contact-title">Email Us</h2>
-                <p class="contact-desc">For general questions, feedback, or anything else. We respond within 24 hours.</p>
-                <a href="mailto:sugrowth+scrolloff@gmail.com" class="contact-link">sugrowth+scrolloff@gmail.com</a>
-            </div>
-            <div class="contact-card">
-                <div class="contact-icon">&#x1F41B;</div>
-                <h2 class="contact-title">Report a Bug</h2>
-                <p class="contact-desc">Found something broken? Create a GitHub issue and we'll investigate right away.</p>
-                <a href="https://github.com/sugrowth/ScrollOff-Public/issues/new?labels=bug&template=bug_report.md&title=%5BBug%5D+" class="contact-link" target="_blank">Report a Bug</a>
-            </div>
-            <div class="contact-card">
-                <div class="contact-icon">&#x1F4A1;</div>
-                <h2 class="contact-title">Feature Request</h2>
-                <p class="contact-desc">Have an idea that would make ScrollOff better? We'd love to hear it.</p>
-                <a href="https://github.com/sugrowth/ScrollOff-Public/issues/new?labels=enhancement&title=%5BFeature%5D+" class="contact-link" target="_blank">Suggest a Feature</a>
-            </div>
-        </div>
+        <p>Find answers to common questions about ScrollOff. Everything from earning time to managing your data.</p>
     </section>
 
     <!-- FAQ -->
@@ -320,69 +295,407 @@
             <h2 class="section-title">Frequently Asked Questions</h2>
         </div>
         <div class="faq-list">
+
+            <!-- Earning Time -->
+            <div class="faq-category-label">Earning Time</div>
+
             <div class="faq-item">
                 <button class="faq-question">
-                    How do I set up ScrollOff for the first time?
+                    How do I earn time?
                     <span class="icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Download ScrollOff from the App Store, open it, and grant Screen Time permission when prompted. Then choose which apps you want to block, set your daily schedule, and you're ready. The app will guide you through each step.</p>
+                    <div class="faq-answer-content">
+                        <p>You earn 5 minutes of screen time for every hour you stay focused and away from your protected apps.</p>
+                        <p><strong>Daily earning caps:</strong></p>
+                        <ul>
+                            <li>Free: 45 minutes per day</li>
+                            <li>Premium: 90 minutes per day</li>
+                            <li>Pro: 120 minutes per day</li>
+                        </ul>
+                        <p>Your scroll time is tracked in real-time and ready to use guilt-free whenever you want.</p>
+                    </div>
                 </div>
             </div>
+
             <div class="faq-item">
                 <button class="faq-question">
-                    Why does ScrollOff need Screen Time permission?
+                    What is daily free time?
                     <span class="icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>ScrollOff uses Apple's Screen Time API to monitor which apps you use and to block them when needed. This is the same secure system that Apple's built-in Screen Time uses. All processing happens locally on your device &mdash; no data is sent anywhere.</p>
+                    <div class="faq-answer-content">
+                        <p>Every tier gets daily free time that resets at midnight:</p>
+                        <ul>
+                            <li>Free: 1 minute daily</li>
+                            <li>Premium: 2 minutes daily</li>
+                            <li>Pro: 5 minutes daily</li>
+                        </ul>
+                        <p>This is separate from your earned time and does not roll over. It is meant for quick checks without using your hard-earned time.</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- Features & Pricing -->
+            <div class="faq-category-label">Features &amp; Pricing</div>
+
             <div class="faq-item">
                 <button class="faq-question">
-                    How do I earn credits?
+                    What features come with each tier?
                     <span class="icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>You earn credits automatically by staying off your blocked apps. The longer you stay focused, the more credits you accumulate. Premium and Pro users can also earn bonus credits through Focus Challenges. Credits can then be spent on "peek" sessions to use your blocked apps guilt-free.</p>
+                    <div class="faq-answer-content">
+                        <p><strong>Free Tier:</strong></p>
+                        <ul>
+                            <li>Daily earning cap: 45 minutes</li>
+                            <li>Daily free time: 1 minute</li>
+                            <li>Rollover: Same-day only</li>
+                            <li>Stats: Today only</li>
+                            <li>Ledger: 7 days</li>
+                            <li>Cooldown after blocking: 2 hours</li>
+                            <li>Max blocked apps: 3</li>
+                            <li>No-Go Zone minimum: 8 hours</li>
+                        </ul>
+                        <p><strong>Premium Tier ($4.99/mo):</strong></p>
+                        <ul>
+                            <li>Daily earning cap: 90 minutes</li>
+                            <li>Daily free time: 2 minutes</li>
+                            <li>Free emergency time: 3 x 1-minute tokens per month</li>
+                            <li>Rollover: 3 days</li>
+                            <li>Stats: 7 days</li>
+                            <li>Ledger: 30 days</li>
+                            <li>Cooldown after blocking: 1 hour</li>
+                            <li>Max blocked apps: Unlimited</li>
+                            <li>No-Go Zone minimum: 4 hours</li>
+                            <li>7-day trends</li>
+                        </ul>
+                        <p><strong>Pro Tier ($8.99/mo or $69.99/year):</strong></p>
+                        <ul>
+                            <li>Daily earning cap: 120 minutes</li>
+                            <li>Daily free time: 5 minutes</li>
+                            <li>Free emergency time: 3 x 5-minute tokens per month</li>
+                            <li>Rollover: 7 days</li>
+                            <li>Stats: 30 days</li>
+                            <li>Ledger: 90 days</li>
+                            <li>Cooldown after blocking: 30 minutes</li>
+                            <li>Max blocked apps: Unlimited</li>
+                            <li>No-Go Zone minimum: 2 hours</li>
+                            <li>30-day trends plus behavioral patterns</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
             <div class="faq-item">
                 <button class="faq-question">
-                    What happens during a No-Go Zone?
+                    How does time rollover work?
                     <span class="icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>During a No-Go Zone, all blocked apps are completely inaccessible &mdash; no peeks, no workarounds, no exceptions (unless you use an Emergency Token). This is designed for times when you need absolute protection, like sleep hours or deep work sessions.</p>
+                    <div class="faq-answer-content">
+                        <p>Unused time rolls over based on your tier:</p>
+                        <ul>
+                            <li>Free: No rollover (expires daily at midnight)</li>
+                            <li>Premium: 3 days (up to 45 minutes per unused day)</li>
+                            <li>Pro: 7 days (up to 60 minutes per unused day)</li>
+                        </ul>
+                        <p>Welcome bonuses do not roll over and expire daily.</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- No-Go Zone -->
+            <div class="faq-category-label">No-Go Zone</div>
+
             <div class="faq-item">
                 <button class="faq-question">
-                    Can I get a refund for my subscription?
+                    What is No-Go Zone?
                     <span class="icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Subscriptions are managed through Apple's App Store. To request a refund, go to Settings > Apple ID > Subscriptions on your iPhone, or visit reportaproblem.apple.com. Apple handles all subscription billing directly.</p>
+                    <div class="faq-answer-content">
+                        <p>No-Go Zone is the strictest mode. Not for everyone. Once activated, you cannot access your protected apps until the timer ends. No exceptions unless you purchase emergency time.</p>
+                        <p><strong>Minimum durations (varies by tier):</strong></p>
+                        <ul>
+                            <li>Free: 8 hours</li>
+                            <li>Premium: 4 hours</li>
+                            <li>Pro: 2 hours</li>
+                        </ul>
+                        <p>Emergency time (15 minutes per token) can be purchased if absolutely necessary. We do not recommend taking this mode lightly.</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- Notifications -->
+            <div class="faq-category-label">Notifications</div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Will I get notified when my time expires?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Yes! ScrollOff keeps your commitment alive with timely notifications:</p>
+                        <ul>
+                            <li>Motivational quotes appear on the dashboard to keep you inspired</li>
+                            <li>While using your time, you will get reminders every 7 seconds as it runs low</li>
+                            <li>When time expires completely, gentle nudges help you stay on track</li>
+                            <li>No-Go Zone sends supportive reminders throughout your session</li>
+                        </ul>
+                        <p>These notifications are not locks or punishments. They are supportive reminders to honor your goals and build better habits.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I open ScrollOff from a shield?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Every shield has an "Open ScrollOff" button. When you tap it, the shield closes and a notification appears. Tap the notification to open ScrollOff.</p>
+                        <p>This is a two-step process because Apple does not allow apps to open directly from a shield.</p>
+                        <p><strong>For this to work, notifications must be turned on:</strong></p>
+                        <ol>
+                            <li>Go to Settings on your iPhone</li>
+                            <li>Tap ScrollOff</li>
+                            <li>Tap Notifications</li>
+                            <li>Turn on Allow Notifications</li>
+                        </ol>
+                        <p>If notifications are off, tapping "Open ScrollOff" will close the shield but nothing else will happen. You will see a note on the shield reminding you to enable notifications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notes to Self -->
+            <div class="faq-category-label">Notes to Self</div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What are notes to self?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Notes to self are "if-then" strategies that appear when you try to open a blocked app. Based on implementation intention research, they help you redirect urges with pre-planned alternatives.</p>
+                        <p><strong>How they work:</strong></p>
+                        <ul>
+                            <li>You create notes like "I'm lying in bed, I'll stretch instead"</li>
+                            <li>When you try opening a blocked app, a random note appears on the shield screen</li>
+                            <li>The note reminds you of the alternative action you committed to</li>
+                        </ul>
+                        <p><strong>Why they are effective:</strong></p>
+                        <ul>
+                            <li>Pre-decided actions bypass in-the-moment willpower battles</li>
+                            <li>Seeing the app name and your plan creates awareness</li>
+                            <li>Implementation intentions (if-then planning) increase success rates by 2 to 3 times in behavioral research</li>
+                        </ul>
+                        <p>Create 3 to 5 notes for best results. You can manage them in Settings under Notes to Self.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trends & Patterns -->
+            <div class="faq-category-label">Trends &amp; Patterns</div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do trends and patterns work?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Your stats are tracked automatically and snapshots are saved daily at midnight.</p>
+                        <p>Trends show "Today vs 7 days ago" comparisons once you have a week of data.</p>
+                        <p><strong>Stats history (how much data you can see):</strong></p>
+                        <ul>
+                            <li>Free: Today only</li>
+                            <li>Premium: 7 days</li>
+                            <li>Pro: 30 days</li>
+                        </ul>
+                        <p><strong>Ledger retention (how long detailed records are kept):</strong></p>
+                        <ul>
+                            <li>Free: 7 days</li>
+                            <li>Premium: 30 days</li>
+                            <li>Pro: 90 days</li>
+                        </ul>
+                        <p><strong>Trends and patterns:</strong></p>
+                        <ul>
+                            <li>Free: No trends or patterns</li>
+                            <li>Premium: 7-day trends</li>
+                            <li>Pro: 30-day trends plus behavioral patterns (late-night spikes, strongest days, weekend patterns)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What is "Your Progress" and what do the scores mean?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>"Your Progress" is a Focus Score from 0 to 100 that shows how well you are managing your screen time. It appears at the top of the Self-control checkpoint in Stats, and as an emoji on the Dashboard.</p>
+                        <p><strong>The score is made up of 4 parts:</strong></p>
+                        <p><strong>Restraint (35% of your score):</strong> How much of today's peek time cap is remaining? If you did not peek at all, you get full marks. If you used up your entire daily cap, you get zero.</p>
+                        <p><strong>Discipline (30% of your score):</strong> How many times did you give in to temptation? This counts the number of times you opened a blocked app, not how long you spent. Peeking once is better than peeking 8 times, even if the total time is similar. Fewer peeks mean stronger willpower.</p>
+                        <p><strong>Consistency (20% of your score):</strong> How many days did you stay completely clean? Days with zero peeks count toward your consistency. On the Dashboard, this looks at the last 7 days to give a rolling trend.</p>
+                        <p><strong>Commitment (15% of your score):</strong> How many apps did you commit to blocking? More blocked apps mean stronger commitment. Blocking 5 or more apps gives you full marks. Free tier users can block up to 3, so the max Commitment score for Free is 60%.</p>
+                        <p>The emoji on the Dashboard changes expression based on your score, from sad (0 to 19) to ecstatic (85 to 100). Tap it for a motivational message! On first launch it shows a welcoming face until your score is ready.</p>
+                        <p>Note: The score only appears after 10 minutes have passed since midnight, to avoid misleading numbers early in the day.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Tools -->
+            <div class="faq-category-label">Data Tools</div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What are Data Tools and how do they work?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Data Tools (Pro-only) help you manage your ScrollOff history with four options:</p>
+                        <p><strong>Export Notifications:</strong> Creates a CSV spreadsheet of your credit history. Great for analysis in Excel or Google Sheets. Shows all earn, spend, bonus, and penalty transactions. This is a read-only snapshot and cannot be restored.</p>
+                        <p><strong>Create Backup:</strong> Archives all your ScrollOff data (notifications, notes to self, stats). Saved to Files app on your device under ScrollOffArchives. Your current data stays intact. It just makes a copy.</p>
+                        <p><strong>Restore Backup:</strong> Brings back a previously saved archive. Replaces your current data with the backup. Restores notifications, notes to self, and all stats.</p>
+                        <p><strong>Reset History:</strong> Permanently deletes all local data. Removes notifications, notes to self, stats, and wallet balances. Cannot be undone without a backup. Use for fresh starts or before giving away your device.</p>
+                        <p>Best practice: Create weekly backups before major changes, export monthly for analysis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Why do some entries show "Protected App" instead of the app name?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>The app name and icon only appear in Recent Activity, Notifications, and Stats if the app is currently in your protected apps list.</p>
+                        <p>If you see "Protected App" instead of the real name, it means the app was removed from your protected list after the peek was recorded, or the entry was created before app name tracking was added.</p>
+                        <p>To see names and icons again, make sure the app is in your protected list. ScrollOff can only show names for apps it currently recognizes.</p>
+                        <p>Backups store the app identifier, so if you restore a backup and the app is in your protected list, the name will appear automatically.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What happens when I restore a backup?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Restoring a backup replaces all your current data with what was saved in the backup file.</p>
+                        <p><strong>What gets restored:</strong></p>
+                        <ul>
+                            <li>All wallet balances (earned time, saved time, emergency tokens, No-Go Zone tokens)</li>
+                            <li>All notification history (ledger entries)</li>
+                            <li>Notes to self</li>
+                            <li>Stats snapshots</li>
+                        </ul>
+                        <p><strong>Important to know:</strong></p>
+                        <ul>
+                            <li>Clean time tracking restarts from the moment you restore. Any time earned between midnight and the restore is lost.</li>
+                            <li>The app treats the restore moment as a fresh start for today's earnings.</li>
+                            <li>Your subscription tier is not affected (it comes from the App Store).</li>
+                        </ul>
+                        <p>If your backup was created with an older version of ScrollOff, some newer wallet fields may not be in the backup. These will default to zero, but your earned and purchased tokens from the backup will still be restored correctly.</p>
+                        <p>Best practice: Always create a fresh backup before restoring an older one, so you have a safety net.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Management -->
+            <div class="faq-category-label">App Management</div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I remove ScrollOff if restrictions don't lift?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>If restrictions do not lift immediately:</p>
+                        <ol>
+                            <li>Reinstall ScrollOff from the App Store</li>
+                            <li>Open the app once (this clears all restrictions)</li>
+                            <li>Delete the app. Restrictions will be lifted.</li>
+                        </ol>
+                        <p>ScrollOff automatically handles reinstallations and clears restrictions when reopened.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How many apps can I block?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>The number of apps you can block depends on your tier:</p>
+                        <ul>
+                            <li>Free: Up to 3 apps</li>
+                            <li>Premium: Unlimited</li>
+                            <li>Pro: Unlimited</li>
+                        </ul>
+                        <p>After blocking apps, there is a cooldown period before you can change your list:</p>
+                        <ul>
+                            <li>Free: 2 hours</li>
+                            <li>Premium: 1 hour</li>
+                            <li>Pro: 30 minutes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- General -->
+            <div class="faq-category-label">General</div>
+
             <div class="faq-item">
                 <button class="faq-question">
                     Is my data safe?
                     <span class="icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Absolutely. ScrollOff processes everything locally on your device. We have no servers, no accounts, no analytics, and no tracking. We literally cannot see your data. Your usage patterns, blocked apps, and habits never leave your phone.</p>
+                    <div class="faq-answer-content">
+                        <p>Absolutely. ScrollOff processes everything locally on your device. We have no servers, no accounts, no analytics, and no tracking. We literally cannot see your data. Your usage patterns, blocked apps, and habits never leave your phone.</p>
+                    </div>
                 </div>
             </div>
+
             <div class="faq-item">
                 <button class="faq-question">
                     Does ScrollOff work on Android?
                     <span class="icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Android support is coming soon! We're actively working on it. Follow us on GitHub or check back for updates on the Android release timeline.</p>
+                    <div class="faq-answer-content">
+                        <p>ScrollOff is currently available on iOS only. Android support is planned. Follow us on GitHub or check back for updates on the Android release timeline.</p>
+                    </div>
                 </div>
             </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I get a refund for my subscription?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Subscriptions are managed through Apple's App Store. To request a refund, go to Settings, then Apple ID, then Subscriptions on your iPhone, or visit reportaproblem.apple.com. Apple handles all subscription billing directly.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -394,20 +707,20 @@
         </div>
         <div class="troubleshoot-grid">
             <div class="troubleshoot-card">
-                <h3 class="troubleshoot-title">Apps aren't being blocked</h3>
-                <p class="troubleshoot-desc">Make sure Screen Time permission is granted. Go to Settings > Screen Time and ensure ScrollOff has access. If the issue persists, try restarting your device and reopening ScrollOff.</p>
+                <h3 class="troubleshoot-title">Apps are not being blocked</h3>
+                <p class="troubleshoot-desc">Make sure Screen Time permission is granted. Go to Settings, then Screen Time, and ensure ScrollOff has access. If the issue persists, try restarting your device and reopening ScrollOff.</p>
             </div>
             <div class="troubleshoot-card">
-                <h3 class="troubleshoot-title">Credits aren't accumulating</h3>
-                <p class="troubleshoot-desc">Credits only accumulate when you have active blocked apps set up and you're staying off them during your configured schedule. Check that your blocking schedule is active and that you have at least one app blocked.</p>
+                <h3 class="troubleshoot-title">Credits are not accumulating</h3>
+                <p class="troubleshoot-desc">Credits only accumulate when you have active blocked apps set up and you are staying away from them. Check that you have at least one app blocked. You earn 5 minutes for every hour of focus.</p>
             </div>
             <div class="troubleshoot-card">
-                <h3 class="troubleshoot-title">Biometric Lock isn't working</h3>
-                <p class="troubleshoot-desc">Ensure Face ID or Touch ID is set up on your device in Settings > Face ID &amp; Passcode. Then enable Biometric Lock within ScrollOff's settings. If it still doesn't work, try toggling the feature off and on again.</p>
+                <h3 class="troubleshoot-title">Shield not appearing for blocked apps</h3>
+                <p class="troubleshoot-desc">If the shield is not showing when you open a blocked app, check that Screen Time permissions are properly configured. Also make sure the app is still in your protected list. Try removing and re-adding the app if the issue persists.</p>
             </div>
             <div class="troubleshoot-card">
                 <h3 class="troubleshoot-title">Subscription not recognized</h3>
-                <p class="troubleshoot-desc">Try restoring purchases within the app. If that doesn't work, make sure you're signed into the same Apple ID used for the purchase. You can also check your subscription status in Settings > Apple ID > Subscriptions.</p>
+                <p class="troubleshoot-desc">Try restoring purchases within the app. If that does not work, make sure you are signed into the same Apple ID used for the purchase. You can also check your subscription status in Settings, then Apple ID, then Subscriptions.</p>
             </div>
         </div>
     </section>
@@ -417,12 +730,12 @@
         <div class="faq-header">
             <div class="section-label">Get in Touch</div>
             <h2 class="section-title">Send Us a Message</h2>
-            <p style="color: var(--gray-text); margin-top: 12px; font-size: 0.95rem;">Fill out the form below and it'll be submitted as a GitHub issue — we'll respond there.</p>
+            <p style="color: var(--gray-text); margin-top: 12px; font-size: 0.95rem;">Fill out the form below and it will be submitted as a GitHub issue. We will respond there.</p>
         </div>
         <div class="form-wrapper">
             <form id="supportForm">
                 <div class="form-group">
-                    <label class="form-label" for="issueType">What's this about?</label>
+                    <label class="form-label" for="issueType">What is this about?</label>
                     <select class="form-select" id="issueType" required>
                         <option value="" disabled selected>Choose a category...</option>
                         <option value="bug">Bug Report</option>
@@ -437,7 +750,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="issueBody">Description</label>
-                    <textarea class="form-textarea" id="issueBody" placeholder="Tell us more — the details help us help you faster." required></textarea>
+                    <textarea class="form-textarea" id="issueBody" placeholder="Tell us more. The details help us help you faster." required></textarea>
                 </div>
                 <button type="submit" class="form-submit">Submit to GitHub</button>
                 <p class="form-note">This opens a pre-filled GitHub issue. You can review it before submitting.</p>
@@ -469,6 +782,7 @@
     </footer>
 
     <script>
+        // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
         hamburger.addEventListener('click', () => {
@@ -477,17 +791,28 @@
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
 
-        // FAQ accordion
+        // FAQ accordion with dynamic max-height
         document.querySelectorAll('.faq-question').forEach(btn => {
             btn.addEventListener('click', () => {
                 const item = btn.parentElement;
+                const answer = item.querySelector('.faq-answer');
                 const wasOpen = item.classList.contains('open');
-                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-                if (!wasOpen) item.classList.add('open');
+
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-answer').style.maxHeight = null;
+                });
+
+                // Open the clicked item if it was not already open
+                if (!wasOpen) {
+                    item.classList.add('open');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
             });
         });
 
-        // Support form → GitHub issue
+        // Support form -> GitHub issue
         document.getElementById('supportForm').addEventListener('submit', function(e) {
             e.preventDefault();
 

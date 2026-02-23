@@ -309,20 +309,33 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr;
-            gap: 32px;
+            gap: 24px;
         }
 
         .blog-card {
+            display: block;
             background: var(--dark-card);
             border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 16px;
-            padding: 40px;
-            transition: border-color 0.2s, transform 0.2s;
+            padding: 36px;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
 
         .blog-card:hover {
-            border-color: rgba(29, 192, 191, 0.2);
-            transform: translateY(-2px);
+            border-color: rgba(29, 192, 191, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
         }
 
         .blog-tag {
@@ -335,15 +348,21 @@
             background: rgba(29, 192, 191, 0.1);
             padding: 4px 12px;
             border-radius: 50px;
-            margin-bottom: 16px;
+        }
+
+        .blog-date {
+            font-size: 0.75rem;
+            color: var(--gray-text);
+            opacity: 0.7;
         }
 
         .blog-title {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             font-weight: 800;
             letter-spacing: -0.5px;
             margin-bottom: 12px;
             line-height: 1.3;
+            color: var(--white);
         }
 
         .blog-excerpt {
@@ -353,6 +372,12 @@
             margin-bottom: 20px;
         }
 
+        .blog-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         .blog-meta {
             display: flex;
             align-items: center;
@@ -360,6 +385,31 @@
             font-size: 0.8rem;
             color: var(--gray-text);
             opacity: 0.7;
+        }
+
+        .blog-read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--teal);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .blog-card:hover .blog-read-more {
+            opacity: 1;
+        }
+
+        .blog-read-more svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.2s;
+        }
+
+        .blog-card:hover .blog-read-more svg {
+            transform: translateX(4px);
         }
 
         /* Newsletter Signup */
@@ -519,6 +569,10 @@
                 font-size: 1.2rem;
             }
 
+            .blog-read-more {
+                opacity: 1;
+            }
+
             .footer-inner {
                 flex-direction: column;
                 gap: 24px;
@@ -581,77 +635,131 @@
     <!-- Blog Posts -->
     <section class="blog-section">
         <div class="blog-grid">
-            <div class="blog-card">
-                <span class="blog-tag">Research</span>
-                <h2 class="blog-title">Why 60% of Screen Time Sessions End in Regret</h2>
-                <p class="blog-excerpt">
-                    The statistic that launched ScrollOff. We dug into the research behind compulsive phone use and found that the problem isn't willpower &mdash; it's how our brains respond to variable reward schedules. Every scroll is a slot machine pull, and your phone knows it.
-                </p>
-                <div class="blog-meta">
-                    <span>5 min read</span>
-                    <span>Digital Wellness</span>
+            <a href="blogs/focus-challenges-building-winning-streak.html" class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-tag">Tips</span>
+                    <span class="blog-date">February 23, 2026</span>
                 </div>
-            </div>
-
-            <div class="blog-card">
-                <span class="blog-tag">Tips</span>
-                <h2 class="blog-title">The No-Go Zone Strategy: Protecting Your Sleep</h2>
+                <h2 class="blog-title">Focus Challenges: How to Build a Winning Streak</h2>
                 <p class="blog-excerpt">
-                    Late-night scrolling is the single biggest destroyer of sleep quality. Here's how to use ScrollOff's No-Go Zones to create a phone-free buffer before bed &mdash; and why your future self will thank you for it.
+                    Focus Challenges gamify your discipline. Start small, build momentum, and before you know it, staying focused is the default, not the exception. Here are strategies from users who've built 30+ day streaks.
                 </p>
-                <div class="blog-meta">
-                    <span>4 min read</span>
-                    <span>Sleep &amp; Health</span>
+                <div class="blog-footer">
+                    <div class="blog-meta">
+                        <span>4 min read</span>
+                        <span>Productivity</span>
+                    </div>
+                    <span class="blog-read-more">
+                        Read article
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </span>
                 </div>
-            </div>
+            </a>
 
-            <div class="blog-card">
-                <span class="blog-tag">Science</span>
-                <h2 class="blog-title">Implementation Intentions: The Science Behind Open Notes</h2>
-                <p class="blog-excerpt">
-                    "When I feel the urge to open Instagram, I will take three deep breaths instead." This if-then planning technique has decades of research behind it. Here's why it works and how ScrollOff's Open Notes feature puts it in your pocket.
-                </p>
-                <div class="blog-meta">
-                    <span>6 min read</span>
-                    <span>Behavioral Science</span>
+            <a href="blogs/rewards-vs-punishment-positive-reinforcement.html" class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-tag">Deep Dive</span>
+                    <span class="blog-date">February 23, 2026</span>
                 </div>
-            </div>
-
-            <div class="blog-card">
-                <span class="blog-tag">Guide</span>
-                <h2 class="blog-title">Your First Week with ScrollOff: What to Expect</h2>
-                <p class="blog-excerpt">
-                    The first few days of any habit change feel weird. Here's a day-by-day guide to your first week with ScrollOff, common pitfalls to avoid, and how to set yourself up for long-term success.
-                </p>
-                <div class="blog-meta">
-                    <span>7 min read</span>
-                    <span>Getting Started</span>
-                </div>
-            </div>
-
-            <div class="blog-card">
-                <span class="blog-tag">Deep Dive</span>
                 <h2 class="blog-title">Rewards vs. Punishment: Why Positive Reinforcement Wins</h2>
                 <p class="blog-excerpt">
                     Screen Time's "limit reached" notification triggers rebellion, not reflection. We break down the psychology behind why earning screen time creates lasting behavior change while hard limits just make you resentful.
                 </p>
-                <div class="blog-meta">
-                    <span>5 min read</span>
-                    <span>Psychology</span>
+                <div class="blog-footer">
+                    <div class="blog-meta">
+                        <span>5 min read</span>
+                        <span>Psychology</span>
+                    </div>
+                    <span class="blog-read-more">
+                        Read article
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </span>
                 </div>
-            </div>
+            </a>
 
-            <div class="blog-card">
-                <span class="blog-tag">Tips</span>
-                <h2 class="blog-title">Focus Challenges: How to Build a Winning Streak</h2>
-                <p class="blog-excerpt">
-                    Focus Challenges gamify your discipline. Start small, build momentum, and before you know it, staying focused is the default &mdash; not the exception. Here are strategies from users who've built 30+ day streaks.
-                </p>
-                <div class="blog-meta">
-                    <span>4 min read</span>
-                    <span>Productivity</span>
+            <a href="blogs/first-week-with-scrolloff.html" class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-tag">Guide</span>
+                    <span class="blog-date">February 23, 2026</span>
                 </div>
-            </div>
+                <h2 class="blog-title">Your First Week with ScrollOff: What to Expect</h2>
+                <p class="blog-excerpt">
+                    The first few days of any habit change feel weird. Here's a day-by-day guide to your first week with ScrollOff, common pitfalls to avoid, and how to set yourself up for long-term success.
+                </p>
+                <div class="blog-footer">
+                    <div class="blog-meta">
+                        <span>7 min read</span>
+                        <span>Getting Started</span>
+                    </div>
+                    <span class="blog-read-more">
+                        Read article
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <a href="blogs/implementation-intentions-science-behind-open-notes.html" class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-tag">Science</span>
+                    <span class="blog-date">February 23, 2026</span>
+                </div>
+                <h2 class="blog-title">Implementation Intentions: The Science Behind Open Notes</h2>
+                <p class="blog-excerpt">
+                    "When I feel the urge to open Instagram, I will take three deep breaths instead." This if-then planning technique has decades of research behind it. Here's why it works and how ScrollOff's Open Notes feature puts it in your pocket.
+                </p>
+                <div class="blog-footer">
+                    <div class="blog-meta">
+                        <span>6 min read</span>
+                        <span>Behavioral Science</span>
+                    </div>
+                    <span class="blog-read-more">
+                        Read article
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <a href="blogs/no-go-zone-strategy-protecting-sleep.html" class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-tag">Tips</span>
+                    <span class="blog-date">February 23, 2026</span>
+                </div>
+                <h2 class="blog-title">The No-Go Zone Strategy: Protecting Your Sleep</h2>
+                <p class="blog-excerpt">
+                    Late-night scrolling is the single biggest destroyer of sleep quality. Here's how to use ScrollOff's No-Go Zones to create a phone-free buffer before bed, and why your future self will thank you for it.
+                </p>
+                <div class="blog-footer">
+                    <div class="blog-meta">
+                        <span>4 min read</span>
+                        <span>Sleep &amp; Health</span>
+                    </div>
+                    <span class="blog-read-more">
+                        Read article
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <a href="blogs/why-screen-time-sessions-end-in-regret.html" class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-tag">Research</span>
+                    <span class="blog-date">February 23, 2026</span>
+                </div>
+                <h2 class="blog-title">Why 60% of Screen Time Sessions End in Regret</h2>
+                <p class="blog-excerpt">
+                    The statistic that launched ScrollOff. We dug into the research behind compulsive phone use and found that the problem isn't willpower. It's how our brains respond to variable reward schedules. Every scroll is a slot machine pull, and your phone knows it.
+                </p>
+                <div class="blog-footer">
+                    <div class="blog-meta">
+                        <span>5 min read</span>
+                        <span>Digital Wellness</span>
+                    </div>
+                    <span class="blog-read-more">
+                        Read article
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -668,7 +776,7 @@
         <p>Download ScrollOff for free and start building better habits today.</p>
         <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="btn" target="_blank">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-            Download for iOS — It's Free
+            Download for iOS. It's Free
         </a>
     </section>
 
