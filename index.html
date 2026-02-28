@@ -53,11 +53,19 @@
             },
             {
                 "@type": "Offer",
+                "name": "Quiet Hours Monthly",
+                "price": "0.99",
+                "priceCurrency": "USD",
+                "priceValidUntil": "2026-12-31",
+                "description": "Scheduled app blocking with automatic start/end, multiple modes, overnight schedules supported, included free in Premium & Pro"
+            },
+            {
+                "@type": "Offer",
                 "name": "Premium Monthly",
                 "price": "4.99",
                 "priceCurrency": "USD",
                 "priceValidUntil": "2026-12-31",
-                "description": "Unlimited app blocking, 2-minute peeks, 90-min daily cap, 3-day rollover, 7-day insights, Focus Challenges, Biometric lock, No-Go Zones (min 4 hrs), 3 free emergency tokens/month"
+                "description": "Unlimited app blocking, 2-minute peeks, 90-min daily cap, 3-day rollover, 7-day insights, Quiet Hours included, Focus Challenges, Milestones, Biometric lock, No-Go Zones (min 4 hrs), 3 free emergency tokens/month"
             },
             {
                 "@type": "Offer",
@@ -65,7 +73,7 @@
                 "price": "8.99",
                 "priceCurrency": "USD",
                 "priceValidUntil": "2026-12-31",
-                "description": "14-day free trial, 5-minute peeks, 120-min daily cap, 7-day rollover, 30-day insights, Focus Challenges, Biometric lock, No-Go Zones (min 2 hrs), 3 free 5-min emergency tokens/month"
+                "description": "14-day free trial, 5-minute peeks, 120-min daily cap, 7-day rollover, 30-day insights with behavioral patterns, Quiet Hours included, Focus Challenges, Milestones, Progress Score tracking, Biometric lock, No-Go Zones (min 2 hrs), 3 free 5-min emergency tokens/month"
             },
             {
                 "@type": "Offer",
@@ -73,7 +81,7 @@
                 "price": "69.99",
                 "priceCurrency": "USD",
                 "priceValidUntil": "2026-12-31",
-                "description": "Save 40% vs monthly. All Pro features for a full year."
+                "description": "Save 35% vs monthly. All Pro features for a full year."
             },
             {
                 "@type": "Offer",
@@ -115,7 +123,7 @@
             "name": "Sugrowth"
         },
         "datePublished": "2025-01-01",
-        "softwareVersion": "v1.4-b2",
+        "softwareVersion": "v2.0-b1",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5",
@@ -126,14 +134,20 @@
         "featureList": [
             "Block any app - Instagram, TikTok, YouTube, Reddit, games, Netflix, Snapchat, Twitter, and more",
             "Earn screen time credits - 5 minutes earned for every hour you stay focused",
-            "No-Go Zones - schedule 1-12 hour periods of absolute zero access for serious focus",
-            "Focus Challenges - gamified daily challenges to earn bonus minutes, track winning streaks",
+            "Quiet Hours - schedule gentle blocking windows with zero penalties for work, sleep, or focused time",
+            "No-Go Zones - schedule periods of absolute zero access for serious focus (2-12 hours depending on tier)",
+            "Focus Challenges - gamified 1-12 hour challenges to earn 30 bonus seconds per hour, track winning streaks",
+            "Milestones - track achievements, completed challenges, and hours protected",
+            "Progress Score - 0-100 score based on restraint, discipline, consistency, and commitment",
             "Open Notes - create if-then implementation intentions to build better habits",
             "Emergency Tokens - purchasable 1, 2, or 5 minute peeks when life demands urgent access",
             "Emergency Unlock during No-Go Zones - 15-minute unlock tokens when you absolutely need access",
             "Emergency Disable - nuclear option to end No-Go Zone early when emergencies happen",
-            "Credit rollover - Premium gets 3-day rollover, Pro gets 7-day rollover",
-            "Usage insights and analytics - 7-day stats (Premium), 30-day stats (Pro)",
+            "Credit rollover - Premium gets 3-day rollover (45 min/day max), Pro gets 7-day rollover (60 min/day max)",
+            "Usage insights and analytics - 7-day stats (Premium), 30-day stats with behavioral patterns (Pro)",
+            "App-based distinction - see which specific apps you peek at most with icons and counts",
+            "7-day focus trends - visual graphs showing your progress over time",
+            "Verified self-control metrics - detailed stats including time away %, clean streaks, peek patterns",
             "Biometric lock for settings protection - stop your impulsive self from changing settings",
             "100% private - all data stays on device, zero tracking, no account required",
             "Daily motivational quotes - fresh inspiration every day",
@@ -142,7 +156,7 @@
             "Works with Apple Screen Time API - system-level blocking that's hard to bypass",
             "Stop doom scrolling, mindless scrolling, zombie scrolling",
             "Reduce phone anxiety, FOMO, and social media depression",
-            "Sleep better - No-Go Zones prevent late night scrolling",
+            "Sleep better - Quiet Hours and No-Go Zones prevent late night scrolling",
             "Improve focus and productivity - earn time instead of wasting it",
             "Break phone addiction with rewards, not punishment",
             "Take back control of your time and your life",
@@ -1894,6 +1908,13 @@
             </p>
         </div>
         <div class="feature-grid">
+            <a href="features.html#quiet-hours" class="feature-card feature-highlight reveal">
+                <div class="icon">⏰</div>
+                <div>
+                    <h3>Quiet Hours <span class="feature-link">Learn more →</span></h3>
+                    <p>Schedule gentle blocking windows with zero wallet penalties. Perfect for work, sleep, or focused time. No guilt, just peace.</p>
+                </div>
+            </a>
             <a href="features.html#no-go-zones" class="feature-card feature-highlight reveal">
                 <div class="icon">🚫</div>
                 <div>
@@ -1904,12 +1925,22 @@
             <a href="features.html#focus-challenges" class="feature-card reveal">
                 <div class="icon">💪</div>
                 <h3>Focus Challenges <span class="feature-link">→</span></h3>
-                <p>Set 1-12 hour focus sessions and earn bonus credits on top of your hourly earnings.</p>
+                <p>Set 1-12 hour focus sessions and earn 30 bonus seconds per hour. Build winning streaks and track your progress.</p>
+            </a>
+            <a href="features.html#milestones" class="feature-card reveal">
+                <div class="icon">🏆</div>
+                <h3>Milestones <span class="feature-link">→</span></h3>
+                <p>Track your achievements, completed challenges, and hours protected. See your progress at a glance.</p>
+            </a>
+            <a href="features.html#progress-score" class="feature-card reveal">
+                <div class="icon">📈</div>
+                <h3>Progress Score <span class="feature-link">→</span></h3>
+                <p>Get a 0-100 score based on restraint, discipline, consistency, and commitment. Know exactly where you stand.</p>
             </a>
             <a href="features.html#usage-insights" class="feature-card reveal">
                 <div class="icon">📊</div>
                 <h3>Usage Insights <span class="feature-link">→</span></h3>
-                <p>See your patterns with 7-day or 30-day analytics. Understand your habits to break them.</p>
+                <p>See which apps you peek at most, 7-day focus trends, and behavioral patterns. Understand your habits to break them.</p>
             </a>
             <a href="features.html#emergency-tokens" class="feature-card reveal">
                 <div class="icon">🎟️</div>

@@ -3,13 +3,13 @@
     <!-- Main Pages -->
     <url>
         <loc>https://scrolloff.app/</loc>
-        <lastmod>2026-02-24</lastmod>
+        <lastmod>2026-02-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://scrolloff.app/features.html</loc>
-        <lastmod>2026-02-24</lastmod>
+        <lastmod>2026-02-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -27,7 +27,7 @@
     </url>
     <url>
         <loc>https://scrolloff.app/blog.html</loc>
-        <lastmod>2026-02-24</lastmod>
+        <lastmod>2026-02-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -63,6 +63,12 @@
     </url>
 
     <!-- Blog Posts -->
+    <url>
+        <loc>https://scrolloff.app/blogs/quiet-hours-vs-no-go-zone.html</loc>
+        <lastmod>2026-02-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
     <url>
         <loc>https://scrolloff.app/blogs/use-it-dont-abuse-it-where-your-screen-time-goes.html</loc>
         <lastmod>2026-02-24</lastmod>
