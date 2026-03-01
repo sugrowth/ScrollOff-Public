@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The No-Go Zone Strategy: Protecting Your Sleep | ScrollOff Blog</title>
-    <meta name="description" content="Late-night scrolling destroys sleep quality. Learn how ScrollOff's No-Go Zones create phone-free buffers before bed and why your future self will thank you.">
-    <meta name="keywords" content="screen time sleep, blue light sleep, late night scrolling, no go zones, scrolloff, phone before bed, sleep hygiene, digital wellness">
+    <meta name="description"
+        content="Late-night scrolling destroys sleep quality. Learn how ScrollOff's No-Go Zones create phone-free buffers before bed and why your future self will thank you.">
+    <meta name="keywords"
+        content="screen time sleep, blue light sleep, late night scrolling, no go zones, scrolloff, phone before bed, sleep hygiene, digital wellness">
 
     <!-- Open Graph -->
     <meta property="og:title" content="The No-Go Zone Strategy: Protecting Your Sleep | ScrollOff Blog">
-    <meta property="og:description" content="Late-night scrolling destroys sleep quality. Learn how No-Go Zones create phone-free buffers before bed.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/sugrowth/ScrollOff-Public/main/assets/app-icon.png">
+    <meta property="og:description"
+        content="Late-night scrolling destroys sleep quality. Learn how No-Go Zones create phone-free buffers before bed.">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/sugrowth/ScrollOff-Public/main/assets/app-icon.png">
     <meta property="og:url" content="https://scrolloff.app/blogs/no-go-zone-strategy-protecting-sleep.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="ScrollOff">
@@ -18,8 +23,10 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="The No-Go Zone Strategy: Protecting Your Sleep | ScrollOff Blog">
-    <meta name="twitter:description" content="Late-night scrolling destroys sleep quality. Learn how No-Go Zones create phone-free buffers before bed.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/sugrowth/ScrollOff-Public/main/assets/app-icon.png">
+    <meta name="twitter:description"
+        content="Late-night scrolling destroys sleep quality. Learn how No-Go Zones create phone-free buffers before bed.">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/sugrowth/ScrollOff-Public/main/assets/app-icon.png">
 
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow">
@@ -61,7 +68,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
@@ -77,9 +85,16 @@
             --gradient: linear-gradient(135deg, #1DC0BF 0%, #0B7F95 100%);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        html { scroll-behavior: smooth; overflow-x: clip; }
+        html {
+            scroll-behavior: smooth;
+            overflow-x: clip;
+        }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -92,7 +107,10 @@
 
         /* Navigation */
         nav {
-            position: fixed; top: 0; width: 100%; z-index: 100;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
             padding: 16px 24px;
             backdrop-filter: blur(20px);
             background: rgba(11, 15, 20, 0.8);
@@ -100,31 +118,54 @@
         }
 
         .nav-inner {
-            max-width: 1200px; margin: 0 auto;
-            display: flex; justify-content: space-between; align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .nav-logo {
-            display: flex; align-items: center; gap: 12px;
-            text-decoration: none; color: var(--white);
-            font-weight: 800; font-size: 1.25rem; letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.25rem;
+            letter-spacing: -0.5px;
         }
 
-        .nav-logo img { width: 36px; height: 36px; border-radius: 8px; }
+        .nav-logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+        }
 
-        .nav-links { display: flex; align-items: center; gap: 32px; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
 
         .nav-links a {
-            color: var(--gray-text); text-decoration: none;
-            font-size: 0.9rem; font-weight: 500; transition: color 0.2s;
+            color: var(--gray-text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
         }
 
-        .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--teal);
+        }
 
         .nav-cta {
             background: var(--gradient);
             color: var(--white) !important;
-            padding: 10px 20px; border-radius: 50px;
+            padding: 10px 20px;
+            border-radius: 50px;
             font-weight: 600 !important;
             transition: transform 0.2s, box-shadow 0.2s !important;
         }
@@ -135,166 +176,297 @@
         }
 
         .hamburger {
-            display: none; flex-direction: column; justify-content: center;
-            gap: 5px; width: 28px; height: 28px; cursor: pointer; z-index: 200;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            z-index: 200;
         }
 
         .hamburger span {
-            display: block; width: 100%; height: 2px;
-            background: var(--white); border-radius: 2px; transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: all 0.3s ease;
         }
 
-        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
 
         .mobile-menu {
-            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-            background: rgba(11, 15, 20, 0.98); backdrop-filter: blur(20px);
-            z-index: 150; flex-direction: column; justify-content: center;
-            align-items: center; gap: 32px;
-            opacity: 0; visibility: hidden;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(11, 15, 20, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 150;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            opacity: 0;
+            visibility: hidden;
             transition: opacity 0.3s ease, visibility 0.3s ease;
         }
 
-        .mobile-menu.active { opacity: 1; visibility: visible; }
-
-        .mobile-menu a {
-            color: var(--white); text-decoration: none;
-            font-size: 1.5rem; font-weight: 500; transition: color 0.2s;
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
         }
 
-        .mobile-menu a:hover, .mobile-menu a.active { color: var(--teal); }
-        .mobile-menu .nav-cta { margin-top: 16px; padding: 14px 32px; font-size: 1.1rem; }
+        .mobile-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: var(--teal);
+        }
+
+        .mobile-menu .nav-cta {
+            margin-top: 16px;
+            padding: 14px 32px;
+            font-size: 1.1rem;
+        }
 
         @media (max-width: 768px) {
-            .hamburger { display: flex; }
-            .mobile-menu { display: flex; }
-            .nav-links a:not(.nav-cta) { display: none; }
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .nav-links a:not(.nav-cta) {
+                display: none;
+            }
         }
 
         /* Back Link */
         .back-link {
-            display: inline-flex; align-items: center; gap: 8px;
-            color: var(--teal); text-decoration: none;
-            font-size: 0.9rem; font-weight: 500; margin-bottom: 32px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--teal);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 32px;
         }
 
-        .back-link:hover { text-decoration: underline; }
+        .back-link:hover {
+            text-decoration: underline;
+        }
 
         /* Article */
         .article-wrapper {
-            max-width: 720px; margin: 0 auto; padding: 120px 24px 60px;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 120px 24px 60px;
         }
 
-        .article-header { margin-bottom: 48px; }
+        .article-header {
+            margin-bottom: 48px;
+        }
 
         .article-tag {
-            display: inline-block; font-size: 0.7rem; font-weight: 700;
-            text-transform: uppercase; letter-spacing: 1.5px;
-            color: var(--teal); background: rgba(29, 192, 191, 0.1);
-            padding: 4px 12px; border-radius: 50px; margin-bottom: 16px;
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--teal);
+            background: rgba(29, 192, 191, 0.1);
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 16px;
         }
 
         .article-title {
-            font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 900;
-            letter-spacing: -1px; line-height: 1.2; margin-bottom: 20px;
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 900;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            margin-bottom: 20px;
         }
 
         .article-meta {
-            display: flex; align-items: center; gap: 16px;
-            font-size: 0.85rem; color: var(--gray-text);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.85rem;
+            color: var(--gray-text);
         }
 
-        .article-meta span { display: flex; align-items: center; gap: 6px; }
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
 
         .meta-dot {
-            width: 4px; height: 4px; background: var(--gray-text);
-            border-radius: 50%; opacity: 0.5;
+            width: 4px;
+            height: 4px;
+            background: var(--gray-text);
+            border-radius: 50%;
+            opacity: 0.5;
         }
 
         .article-body h2 {
-            font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px;
-            margin: 48px 0 16px; color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin: 48px 0 16px;
+            color: var(--white);
         }
 
         .article-body h3 {
-            font-size: 1.2rem; font-weight: 700;
-            margin: 32px 0 12px; color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 32px 0 12px;
+            color: var(--white);
         }
 
         .article-body p {
-            font-size: 1.05rem; color: var(--gray-text);
-            line-height: 1.8; margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: var(--gray-text);
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
 
-        .article-body strong { color: var(--white); font-weight: 600; }
-        .article-body em { color: var(--teal-muted); }
+        .article-body strong {
+            color: var(--white);
+            font-weight: 600;
+        }
 
-        .article-body ul, .article-body ol {
-            margin: 16px 0 24px 24px; color: var(--gray-text);
+        .article-body em {
+            color: var(--teal-muted);
+        }
+
+        .article-body ul,
+        .article-body ol {
+            margin: 16px 0 24px 24px;
+            color: var(--gray-text);
         }
 
         .article-body li {
-            font-size: 1.05rem; line-height: 1.8; margin-bottom: 8px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 8px;
         }
 
         .article-body blockquote {
             border-left: 3px solid var(--teal);
-            padding: 16px 24px; margin: 24px 0;
+            padding: 16px 24px;
+            margin: 24px 0;
             background: rgba(29, 192, 191, 0.05);
             border-radius: 0 12px 12px 0;
         }
 
         .article-body blockquote p {
-            color: var(--teal-muted); font-style: italic; margin-bottom: 0;
+            color: var(--teal-muted);
+            font-style: italic;
+            margin-bottom: 0;
         }
 
         .ad-slot {
             display: none;
             background: var(--dark-card);
             border: 1px dashed rgba(148, 163, 184, 0.2);
-            border-radius: 12px; padding: 32px; text-align: center;
-            margin: 40px 0; color: var(--gray-text); font-size: 0.8rem;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            margin: 40px 0;
+            color: var(--gray-text);
+            font-size: 0.8rem;
         }
 
         /* Comments */
-        .comments-section { max-width: 720px; margin: 0 auto; padding: 0 24px 60px; }
-        .comments-wrapper { padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+        .comments-section {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px 60px;
+        }
+
+        .comments-wrapper {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
 
         .cta {
-            text-align: center; padding: 80px 24px 100px; position: relative;
+            text-align: center;
+            padding: 80px 24px 100px;
+            position: relative;
         }
 
         .cta::before {
-            content: ''; position: absolute; bottom: 0; left: 50%;
-            transform: translateX(-50%); width: 800px; height: 800px;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
             background: radial-gradient(ellipse, rgba(29, 192, 191, 0.1) 0%, transparent 60%);
             pointer-events: none;
         }
 
         .cta h2 {
-            font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 900;
-            margin-bottom: 16px; position: relative;
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: 900;
+            margin-bottom: 16px;
+            position: relative;
         }
 
         .cta h2 .gradient {
             background: var(--gradient);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .cta p {
-            color: var(--gray-text); font-size: 1.1rem;
-            margin-bottom: 32px; position: relative;
+            color: var(--gray-text);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+            position: relative;
         }
 
         .btn {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: var(--gradient); color: var(--white);
-            padding: 16px 32px; border-radius: 50px; text-decoration: none;
-            font-weight: 700; font-size: 1.05rem;
-            transition: transform 0.2s, box-shadow 0.2s; position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
         }
 
         .btn:hover {
@@ -302,49 +474,117 @@
             box-shadow: 0 12px 32px rgba(29, 192, 191, 0.3);
         }
 
-        .btn svg { width: 20px; height: 20px; }
+        .btn svg {
+            width: 20px;
+            height: 20px;
+        }
 
         footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 48px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 48px 24px;
         }
 
         .footer-inner {
-            max-width: 1200px; margin: 0 auto;
-            display: flex; justify-content: space-between; align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .footer-left { display: flex; flex-direction: column; gap: 4px; }
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
 
         .footer-brand {
-            display: flex; align-items: center; gap: 8px;
-            font-weight: 700; font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
         }
 
-        .footer-brand img { width: 24px; height: 24px; border-radius: 6px; }
-        .footer-copy { font-size: 0.8rem; color: var(--gray-text); }
-        .footer-version { font-size: 0.65rem; color: var(--gray-text); opacity: 0.5; }
-        .footer-links { display: flex; gap: 32px; }
+        .footer-brand img {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: var(--gray-text);
+        }
+
+        .footer-version {
+            font-size: 0.65rem;
+            color: var(--gray-text);
+            opacity: 0.5;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+        }
 
         .footer-links a {
-            color: var(--gray-text); text-decoration: none;
-            font-size: 0.85rem; transition: color 0.2s;
+            color: var(--gray-text);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
         }
 
-        .footer-links a:hover { color: var(--teal); }
+        .footer-links a:hover {
+            color: var(--teal);
+        }
 
         @media (max-width: 768px) {
-            .article-wrapper { padding: 100px 20px 40px; }
-            .article-title { font-size: 1.5rem; }
-            .article-meta { flex-wrap: wrap; gap: 8px; }
-            .article-body h2 { font-size: 1.25rem; }
-            .article-body h3 { font-size: 1.05rem; }
-            .article-body p, .article-body li { font-size: 0.95rem; }
-            .footer-inner { flex-direction: column; gap: 24px; text-align: center; }
-            .footer-links { flex-wrap: wrap; justify-content: center; gap: 24px; }
-            .footer-left { align-items: center; }
+            .article-wrapper {
+                padding: 100px 20px 40px;
+            }
+
+            .article-title {
+                font-size: 1.5rem;
+            }
+
+            .article-meta {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .article-body h2 {
+                font-size: 1.25rem;
+            }
+
+            .article-body h3 {
+                font-size: 1.05rem;
+            }
+
+            .article-body p,
+            .article-body li {
+                font-size: 0.95rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 24px;
+            }
+
+            .footer-left {
+                align-items: center;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -400,11 +640,17 @@
         </header>
 
         <div class="article-body">
+            <img src="no-go-zone-strategy-protecting-sleep/hero.png" alt="Blog Hero Image"
+                style="width: 100%; height: auto; border-radius: 16px; margin-bottom: 40px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.05);">
             <p>
-                It is 11:47 PM. You told yourself you would go to bed at 11:00. But you opened Instagram "for just a second" and now you are 47 minutes deep into Reels, your brain wired with blue light and dopamine, and sleep feels further away than ever.
+                It is 11:47 PM. You told yourself you would go to bed at 11:00. But you opened Instagram "for just a
+                second" and now you are 47 minutes deep into Reels, your brain wired with blue light and dopamine, and
+                sleep feels further away than ever.
             </p>
             <p>
-                Sound familiar? You are not alone. <strong>Late-night scrolling is the single biggest destroyer of sleep quality</strong> for smartphone users, and the consequences go far beyond feeling groggy the next morning.
+                Sound familiar? You are not alone. <strong>Late-night scrolling is the single biggest destroyer of sleep
+                    quality</strong> for smartphone users, and the consequences go far beyond feeling groggy the next
+                morning.
             </p>
 
             <!-- AdSense placeholder -->
@@ -414,47 +660,73 @@
 
             <h2>What Late-Night Scrolling Does to Your Brain</h2>
             <p>
-                Your body has a natural clock called the <strong>circadian rhythm</strong>, and it relies heavily on light signals to know when it is time to sleep. When you stare at your phone in the dark, two things happen simultaneously, and both of them sabotage your rest.
+                Your body has a natural clock called the <strong>circadian rhythm</strong>, and it relies heavily on
+                light signals to know when it is time to sleep. When you stare at your phone in the dark, two things
+                happen simultaneously, and both of them sabotage your rest.
             </p>
 
             <h3>The Blue Light Problem</h3>
             <p>
-                Your phone screen emits blue wavelength light that directly suppresses the production of <strong>melatonin</strong>, the hormone that tells your body it is time to sleep. Research published in the <em>Proceedings of the National Academy of Sciences</em> found that people who used light-emitting devices before bed took longer to fall asleep, had less REM sleep, and felt sleepier the next morning even after a full eight hours in bed.
+                Your phone screen emits blue wavelength light that directly suppresses the production of
+                <strong>melatonin</strong>, the hormone that tells your body it is time to sleep. Research published in
+                the <em>Proceedings of the National Academy of Sciences</em> found that people who used light-emitting
+                devices before bed took longer to fall asleep, had less REM sleep, and felt sleepier the next morning
+                even after a full eight hours in bed.
             </p>
             <p>
-                Night mode and blue light filters help, but they do not solve the problem entirely. Even with a warm screen tint, the act of engaging with stimulating content keeps your brain in an alert, active state that is incompatible with sleep onset.
+                Night mode and blue light filters help, but they do not solve the problem entirely. Even with a warm
+                screen tint, the act of engaging with stimulating content keeps your brain in an alert, active state
+                that is incompatible with sleep onset.
             </p>
 
             <h3>The Cognitive Arousal Problem</h3>
             <p>
-                Even if we could eliminate blue light entirely, scrolling before bed would still wreck your sleep. The content itself, funny videos, outrage-inducing posts, exciting news, creates <strong>cognitive arousal</strong> that takes time to dissipate. Your brain cannot switch from processing a stream of novel, stimulating information to peaceful sleep in seconds. It needs a wind-down period.
+                Even if we could eliminate blue light entirely, scrolling before bed would still wreck your sleep. The
+                content itself, funny videos, outrage-inducing posts, exciting news, creates <strong>cognitive
+                    arousal</strong> that takes time to dissipate. Your brain cannot switch from processing a stream of
+                novel, stimulating information to peaceful sleep in seconds. It needs a wind-down period.
             </p>
             <p>
-                Studies show that people who engage with social media in the hour before bed take an average of <strong>30 minutes longer to fall asleep</strong> than those who do not. That is 30 minutes of lying in the dark, mind racing, thinking about posts you saw, composing replies you will never send, or simply unable to quiet the mental noise.
+                Studies show that people who engage with social media in the hour before bed take an average of
+                <strong>30 minutes longer to fall asleep</strong> than those who do not. That is 30 minutes of lying in
+                the dark, mind racing, thinking about posts you saw, composing replies you will never send, or simply
+                unable to quiet the mental noise.
             </p>
 
             <h2>The Compounding Effect</h2>
             <p>
-                Here is what makes this particularly insidious: <strong>poor sleep makes you more susceptible to phone addiction the next day.</strong> When you are sleep-deprived, your prefrontal cortex (the part responsible for self-control and decision-making) operates at reduced capacity. You are more impulsive, more reactive to notifications, and less able to resist the urge to scroll.
+                Here is what makes this particularly insidious: <strong>poor sleep makes you more susceptible to phone
+                    addiction the next day.</strong> When you are sleep-deprived, your prefrontal cortex (the part
+                responsible for self-control and decision-making) operates at reduced capacity. You are more impulsive,
+                more reactive to notifications, and less able to resist the urge to scroll.
             </p>
             <p>
-                This creates a vicious cycle. You scroll late at night. You sleep poorly. You have less willpower the next day. You scroll more. You scroll later. You sleep worse. Repeat.
+                This creates a vicious cycle. You scroll late at night. You sleep poorly. You have less willpower the
+                next day. You scroll more. You scroll later. You sleep worse. Repeat.
             </p>
 
             <h2>How No-Go Zones Break the Cycle</h2>
             <p>
-                ScrollOff's No-Go Zones are designed specifically for situations like this. A No-Go Zone is a scheduled period of <strong>absolute zero access</strong> to your blocked apps. No credits, no peeks, no exceptions. You set the hours, and during those hours, the apps are locked down completely.
+                ScrollOff's No-Go Zones are designed specifically for situations like this. A No-Go Zone is a scheduled
+                period of <strong>absolute zero access</strong> to your blocked apps. No credits, no peeks, no
+                exceptions. You set the hours, and during those hours, the apps are locked down completely.
             </p>
             <p>
-                For sleep protection, the setup is simple. You create a No-Go Zone that covers the hours before your bedtime through the morning. For example, 10:00 PM to 7:00 AM.
+                For sleep protection, the setup is simple. You create a No-Go Zone that covers the hours before your
+                bedtime through the morning. For example, 10:00 PM to 7:00 AM.
             </p>
 
             <h3>Why This Works Better Than Willpower</h3>
             <p>
-                The beauty of a No-Go Zone is that <strong>it removes the decision entirely.</strong> You do not have to debate with yourself at 11:30 PM about whether to open TikTok. The option simply does not exist. Your tired, depleted willpower never gets tested because there is nothing to resist.
+                The beauty of a No-Go Zone is that <strong>it removes the decision entirely.</strong> You do not have to
+                debate with yourself at 11:30 PM about whether to open TikTok. The option simply does not exist. Your
+                tired, depleted willpower never gets tested because there is nothing to resist.
             </p>
             <p>
-                This is a principle called <strong>precommitment</strong>, making a decision when you are thinking clearly (during the day) that constrains your future self (at night when you are tired and impulsive). It is the same reason people ask bartenders to cut them off after two drinks. You know your future self will make bad choices, so you design around it.
+                This is a principle called <strong>precommitment</strong>, making a decision when you are thinking
+                clearly (during the day) that constrains your future self (at night when you are tired and impulsive).
+                It is the same reason people ask bartenders to cut them off after two drinks. You know your future self
+                will make bad choices, so you design around it.
             </p>
 
             <h2>Setting Up Your Sleep No-Go Zone</h2>
@@ -462,27 +734,40 @@
                 Here is a practical guide to setting up No-Go Zones for better sleep:
             </p>
             <ol>
-                <li><strong>Start with your target bedtime.</strong> If you want to be asleep by 11:00 PM, set your No-Go Zone to start at 10:00 PM. You need at least an hour of screen-free wind-down time.</li>
-                <li><strong>Extend it through the morning.</strong> Set the end time for when you actually need to use those apps, like 7:00 AM or 8:00 AM. This prevents the "first thing I do is check my phone" habit.</li>
-                <li><strong>Keep phone calls and messages available.</strong> ScrollOff only blocks the apps you choose. Your phone, text messages, and alarm clock still work normally. This is not about disconnecting from the world, just from the doom scrolling.</li>
-                <li><strong>Prepare a wind-down alternative.</strong> The first few nights will feel strange. Have a book, a podcast, or a simple stretching routine ready for those 30 to 60 minutes before bed.</li>
+                <li><strong>Start with your target bedtime.</strong> If you want to be asleep by 11:00 PM, set your
+                    No-Go Zone to start at 10:00 PM. You need at least an hour of screen-free wind-down time.</li>
+                <li><strong>Extend it through the morning.</strong> Set the end time for when you actually need to use
+                    those apps, like 7:00 AM or 8:00 AM. This prevents the "first thing I do is check my phone" habit.
+                </li>
+                <li><strong>Keep phone calls and messages available.</strong> ScrollOff only blocks the apps you choose.
+                    Your phone, text messages, and alarm clock still work normally. This is not about disconnecting from
+                    the world, just from the doom scrolling.</li>
+                <li><strong>Prepare a wind-down alternative.</strong> The first few nights will feel strange. Have a
+                    book, a podcast, or a simple stretching routine ready for those 30 to 60 minutes before bed.</li>
             </ol>
 
             <blockquote>
-                <p>"The best sleep hack isn't a supplement, a mattress, or a temperature setting. It's keeping your phone away from your face after 10 PM."</p>
+                <p>"The best sleep hack isn't a supplement, a mattress, or a temperature setting. It's keeping your
+                    phone away from your face after 10 PM."</p>
             </blockquote>
 
             <h3>The Free Tier Gets You Started</h3>
             <p>
-                On ScrollOff's free tier, No-Go Zones have a minimum duration of 8 hours, which is actually perfect for sleep protection. An 8-hour No-Go Zone from 10 PM to 6 AM covers the critical window. Premium users can set zones as short as 4 hours, and Pro users can go as low as 2 hours for more flexible scheduling.
+                On ScrollOff's free tier, No-Go Zones have a minimum duration of 8 hours, which is actually perfect for
+                sleep protection. An 8-hour No-Go Zone from 10 PM to 6 AM covers the critical window. Premium users can
+                set zones as short as 4 hours, and Pro users can go as low as 2 hours for more flexible scheduling.
             </p>
 
             <h2>What to Expect in the First Week</h2>
             <p>
-                The first two or three nights will be the hardest. You will reach for your phone out of habit and find the apps blocked. You might feel restless or bored. This is normal. Your brain has been conditioned to expect stimulation, and it takes a few days to adjust.
+                The first two or three nights will be the hardest. You will reach for your phone out of habit and find
+                the apps blocked. You might feel restless or bored. This is normal. Your brain has been conditioned to
+                expect stimulation, and it takes a few days to adjust.
             </p>
             <p>
-                By the end of the first week, most users report falling asleep faster, waking up feeling more rested, and actually <em>enjoying</em> the phone-free evening time. Many discover that the 30 to 60 minutes before bed becomes the most peaceful part of their day.
+                By the end of the first week, most users report falling asleep faster, waking up feeling more rested,
+                and actually <em>enjoying</em> the phone-free evening time. Many discover that the 30 to 60 minutes
+                before bed becomes the most peaceful part of their day.
             </p>
             <p>
                 Your future self will thank you. And your mornings will never be the same.
@@ -501,7 +786,10 @@
         <h2>Ready for <span class="gradient">Better Sleep Tonight?</span></h2>
         <p>Download ScrollOff and set up your first No-Go Zone in under a minute.</p>
         <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="btn" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" />
+            </svg>
             Download for iOS. It's Free
         </a>
     </section>
@@ -509,21 +797,11 @@
     <!-- Comments -->
     <section class="comments-section">
         <div class="comments-wrapper">
-            <script src="https://giscus.app/client.js"
-                data-repo="sugrowth/ScrollOff-Public"
-                data-repo-id="R_kgDOQJZPQQ"
-                data-category="General"
-                data-category-id="DIC_kwDOQJZPQc4C3GK1"
-                data-mapping="pathname"
-                data-strict="0"
-                data-reactions-enabled="1"
-                data-emit-metadata="0"
-                data-input-position="top"
-                data-theme="dark"
-                data-lang="en"
-                crossorigin="anonymous"
-                async>
-            </script>
+            <script src="https://giscus.app/client.js" data-repo="sugrowth/ScrollOff-Public" data-repo-id="R_kgDOQJZPQQ"
+                data-category="General" data-category-id="DIC_kwDOQJZPQc4C3GK1" data-mapping="pathname" data-strict="0"
+                data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="dark"
+                data-lang="en" crossorigin="anonymous" async>
+                </script>
         </div>
     </section>
 
@@ -568,4 +846,5 @@
         }
     </script>
 </body>
+
 </html>

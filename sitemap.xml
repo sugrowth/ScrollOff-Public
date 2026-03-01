@@ -64,6 +64,12 @@
 
     <!-- Blog Posts -->
     <url>
+        <loc>https://scrolloff.app/blogs/breaking-notification-habit-why-phone-buzzes-100-times-daily.html</loc>
+        <lastmod>2026-02-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://scrolloff.app/blogs/quiet-hours-vs-no-go-zone.html</loc>
         <lastmod>2026-02-28</lastmod>
         <changefreq>monthly</changefreq>
