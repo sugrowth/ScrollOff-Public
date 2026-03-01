@@ -70,6 +70,24 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://scrolloff.app/blogs/you-already-know-what-you-need-fighting-information-overload.html</loc>
+        <lastmod>2026-02-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scrolloff.app/blogs/news-you-dont-need-why-breaking-news-breaks-focus.html</loc>
+        <lastmod>2026-02-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scrolloff.app/blogs/information-vs-entertainment-why-30-seconds-wont-teach-anything.html</loc>
+        <lastmod>2026-02-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://scrolloff.app/blogs/quiet-hours-vs-no-go-zone.html</loc>
         <lastmod>2026-02-28</lastmod>
         <changefreq>monthly</changefreq>
