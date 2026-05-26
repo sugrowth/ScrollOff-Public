@@ -27,7 +27,7 @@
     </url>
     <url>
         <loc>https://scrolloff.app/blog.html</loc>
-        <lastmod>2026-02-28</lastmod>
+        <lastmod>2026-05-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -63,6 +63,12 @@
     </url>
 
     <!-- Blog Posts -->
+    <url>
+        <loc>https://scrolloff.app/blogs/i-didnt-realize-my-nights-were-being-stolen.html</loc>
+        <lastmod>2026-05-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
     <url>
         <loc>https://scrolloff.app/blogs/breaking-notification-habit-why-phone-buzzes-100-times-daily.html</loc>
         <lastmod>2026-02-28</lastmod>
