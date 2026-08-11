@@ -108,21 +108,13 @@
         "downloadUrl": "https://apps.apple.com/app/scrolloff/id6755688472",
         "installUrl": "https://apps.apple.com/app/scrolloff/id6755688472",
         "screenshot": [
-            "https://scrolloff.app/assets/dashboard-free.png",
-            "https://scrolloff.app/assets/dashboard-premium.png",
-            "https://scrolloff.app/assets/dashboard-pro.png",
-            "https://scrolloff.app/assets/peek-view.png",
-            "https://scrolloff.app/assets/shield.png",
-            "https://scrolloff.app/assets/set-noted-to-self.png",
-            "https://scrolloff.app/assets/quiet-hours.png",
-            "https://scrolloff.app/assets/focus-challenge-start.png",
-            "https://scrolloff.app/assets/focus-challenge.png",
-            "https://scrolloff.app/assets/focus-summary.png",
-            "https://scrolloff.app/assets/7-day-trend.png",
-            "https://scrolloff.app/assets/metrics-detailed.png",
-            "https://scrolloff.app/assets/nogozone-performance.png",
-            "https://scrolloff.app/assets/shield-note-to-self.png",
-            "https://scrolloff.app/assets/shield-no-go-zone.png"
+            "https://scrolloff.app/assets/ios/dashboard.png",
+            "https://scrolloff.app/assets/ios/choose-apps.png",
+            "https://scrolloff.app/assets/ios/notes.png",
+            "https://scrolloff.app/assets/ios/plans.png",
+            "https://scrolloff.app/assets/ios/nogozone.png",
+            "https://scrolloff.app/assets/ios/stats-summary.png",
+            "https://scrolloff.app/assets/ios/stats-detail.png"
         ],
         "image": "https://scrolloff.app/assets/app-icon.png",
         "author": {
@@ -135,7 +127,7 @@
             "name": "Sugrowth"
         },
         "datePublished": "2025-01-01",
-        "softwareVersion": "v2.3-b1",
+        "softwareVersion": "v3.0.0-b1",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5",
@@ -161,7 +153,7 @@
             "7-day focus trends - visual graphs showing your progress over time",
             "Verified self-control metrics - detailed stats including time away %, clean streaks, peek patterns",
             "Biometric lock for settings protection - stop your impulsive self from changing settings",
-            "Website blocking on Safari - automatically blocks matching websites (instagram.com, tiktok.com, etc.) when you block apps, covers ~40 popular apps",
+            "Website blocking - automatically blocks matching websites (instagram.com, tiktok.com, etc.) when you block apps, covers ~40 popular apps",
             "100% private - all data stays on device, zero tracking, no account required",
             "Daily motivational quotes - fresh inspiration every day",
             "Pause and resume peeks - preserve your time when interrupted",
@@ -177,7 +169,7 @@
             "Build healthy phone habits and boundaries that stick",
             "Combat Instagram addiction, TikTok addiction, YouTube addiction, gaming addiction"
         ],
-        "releaseNotes": "Reward-based screen time management for iOS",
+        "releaseNotes": "Reward-based screen time management",
         "permissions": "Requires Screen Time permission to monitor and block apps",
         "memoryRequirements": "10MB",
         "privacyPolicy": "https://scrolloff.app/privacy.html",
@@ -610,6 +602,40 @@
             -webkit-transform: translateZ(0);
             transform: translateZ(0);
             backface-visibility: hidden;
+        }
+
+        .platform-toggle {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 14px;
+        }
+
+        .platform-toggle button {
+            padding: 7px 22px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-muted, #9aa7b2);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .platform-toggle button.active {
+            background: rgba(29, 192, 191, 0.16);
+            border-color: var(--teal);
+            color: var(--teal);
+        }
+
+        .platform-pane.hidden {
+            display: none;
+        }
+
+        @keyframes scrollyFloat {
+            0%, 100% { transform: translateY(0) rotate(-4deg); }
+            50% { transform: translateY(-10px) rotate(3deg); }
         }
 
         .carousel-dots {
@@ -1694,6 +1720,15 @@
                 height: 8px;
             }
         }
+    
+        .icon img, .feature-icon img, .step-icon img, .feature-card .icon img, .privacy-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            padding: 12%;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
@@ -1703,7 +1738,8 @@
             <a href="#" class="nav-logo">
                 <img src="assets/app-icon.png" alt="ScrollOff">
                 ScrollOff
-            </a>
+            
+                <img src="assets/scrolly/scrolly_superstar_anim.webp" alt="" class="nav-scrolly" style="width:34px;height:34px;border-radius:0;"></a>
             <div class="nav-links">
                 <a href="#how" class="active">How It Works</a>
                 <a href="features.html">Features</a>
@@ -1737,8 +1773,7 @@
         <div class="hero-inner">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <svg viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
-                    Available on the App Store
+                    Available now &mdash; Free
                 </div>
                 <div class="hero-badge-android">
                     <svg viewBox="0 0 24 24"><path fill="#FBBC04" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#4285F4" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#34A853" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#EA4335" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
@@ -1753,8 +1788,7 @@
                 </p>
                 <div class="hero-actions">
                     <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="btn btn-primary" target="_blank">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-                        Download for iOS
+                                                Download Free
                     </a>
                     <a href="#how" class="btn btn-secondary">
                         See How It Works
@@ -1763,71 +1797,81 @@
             </div>
             <div class="hero-visual">
                 <div class="phone-carousel">
+                    <div class="platform-toggle" id="platformToggle">
+                        <button class="active" data-platform="ios" aria-label="Show iOS screenshots">iOS</button>
+                        <button data-platform="android" aria-label="Show Android screenshots">Android</button>
+                    </div>
+                    <div class="platform-pane" id="pane-ios">
                     <div class="carousel-container">
                         <div class="carousel-slides" id="carouselSlides">
                             <div class="carousel-slide">
-                                <img src="assets/dashboard-free.png" alt="Free Tier Dashboard">
+                                <img src="assets/ios/dashboard.png" alt="iOS Dashboard">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/dashboard-premium.png" alt="Premium Tier Dashboard">
+                                <img src="assets/ios/choose-apps.png" alt="iOS Choose Apps to Protect">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/dashboard-pro.png" alt="Pro Tier Dashboard">
+                                <img src="assets/ios/notes.png" alt="iOS Notes to Self">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/peek-view.png" alt="Peek View with Note">
+                                <img src="assets/ios/plans.png" alt="iOS Plans and Add-ons">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/shield.png" alt="Protected Apps Shield">
+                                <img src="assets/ios/nogozone.png" alt="iOS No-Go Zone">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/set-noted-to-self.png" alt="Set Note to Self">
+                                <img src="assets/ios/stats-summary.png" alt="iOS Focus Summary">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/quiet-hours.png" alt="Quiet Hours Scheduling">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="assets/focus-challenge-start.png" alt="Focus Challenge Start">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="assets/focus-challenge.png" alt="Focus Challenge Timer">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="assets/focus-summary.png" alt="7-Day Focus Summary">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="assets/7-day-trend.png" alt="7-Day Trend Chart">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="assets/metrics-detailed.png" alt="Detailed Metrics and Analytics">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="assets/nogozone-performance.png" alt="No-Go Zone Performance Stats">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="assets/shield-note-to-self.png" alt="Shield with Note to Self">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="assets/shield-no-go-zone.png" alt="Shield with No-Go Zone">
+                                <img src="assets/ios/stats-detail.png" alt="iOS Detailed Stats">
                             </div>
                         </div>
                     </div>
                     <div class="carousel-dots">
-                        <button class="carousel-dot active" data-slide="0" aria-label="Free Dashboard"></button>
-                        <button class="carousel-dot" data-slide="1" aria-label="Premium Dashboard"></button>
-                        <button class="carousel-dot" data-slide="2" aria-label="Pro Dashboard"></button>
-                        <button class="carousel-dot" data-slide="3" aria-label="Peek View"></button>
-                        <button class="carousel-dot" data-slide="4" aria-label="Protected Apps"></button>
-                        <button class="carousel-dot" data-slide="5" aria-label="Set Note"></button>
-                        <button class="carousel-dot" data-slide="6" aria-label="Quiet Hours"></button>
-                        <button class="carousel-dot" data-slide="7" aria-label="Challenge Start"></button>
-                        <button class="carousel-dot" data-slide="8" aria-label="Focus Challenge"></button>
-                        <button class="carousel-dot" data-slide="9" aria-label="Focus Summary"></button>
-                        <button class="carousel-dot" data-slide="10" aria-label="7-Day Trend"></button>
-                        <button class="carousel-dot" data-slide="11" aria-label="Detailed Metrics"></button>
-                        <button class="carousel-dot" data-slide="12" aria-label="Zone Performance"></button>
-                        <button class="carousel-dot" data-slide="13" aria-label="Shield Note"></button>
-                        <button class="carousel-dot" data-slide="14" aria-label="Shield Zone"></button>
+                        <button class="carousel-dot active" data-slide="0" aria-label="iOS Dashboard"></button>
+                        <button class="carousel-dot" data-slide="1" aria-label="iOS Choose Apps to Protect"></button>
+                        <button class="carousel-dot" data-slide="2" aria-label="iOS Notes to Self"></button>
+                        <button class="carousel-dot" data-slide="3" aria-label="iOS Plans and Add-ons"></button>
+                        <button class="carousel-dot" data-slide="4" aria-label="iOS No-Go Zone"></button>
+                        <button class="carousel-dot" data-slide="5" aria-label="iOS Focus Summary"></button>
+                        <button class="carousel-dot" data-slide="6" aria-label="iOS Detailed Stats"></button>
+                    </div>
+                    </div>
+                    <div class="platform-pane hidden" id="pane-android">
+                    <div class="carousel-container">
+                        <div class="carousel-slides" id="carouselSlidesAndroid">
+                            <div class="carousel-slide">
+                                <img src="assets/android/dashboard.png" alt="Android Dashboard">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/android/peek-view.png" alt="Android Peek View">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/android/notes.png" alt="Android Notes to Self">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/android/quiet-hours.png" alt="Android Quiet Hours">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/android/nogozone.png" alt="Android No-Go Zone">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/android/stats-summary.png" alt="Android Focus Summary">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/android/stats-detail.png" alt="Android Detailed Stats">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-dots">
+                        <button class="carousel-dot active" data-slide="0" aria-label="Android Dashboard"></button>
+                        <button class="carousel-dot" data-slide="1" aria-label="Android Peek View"></button>
+                        <button class="carousel-dot" data-slide="2" aria-label="Android Notes to Self"></button>
+                        <button class="carousel-dot" data-slide="3" aria-label="Android Quiet Hours"></button>
+                        <button class="carousel-dot" data-slide="4" aria-label="Android No-Go Zone"></button>
+                        <button class="carousel-dot" data-slide="5" aria-label="Android Focus Summary"></button>
+                        <button class="carousel-dot" data-slide="6" aria-label="Android Detailed Stats"></button>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -1921,19 +1965,19 @@
         <div class="steps">
             <div class="step reveal">
                 <div class="step-number">1</div>
-                <div class="step-icon">🎯</div>
+                <div class="step-icon"><img src="assets/scrolly/icons/shield.png" alt=""></div>
                 <h3>Choose Your Blocks</h3>
                 <p>Pick the apps that steal your time - social media, games, streaming, whatever your weakness is. Block any app, not just social media.</p>
             </div>
             <div class="step reveal">
                 <div class="step-number">2</div>
-                <div class="step-icon">⏳</div>
+                <div class="step-icon"><img src="assets/scrolly/icons/stopwatch.png" alt=""></div>
                 <h3>Earn Credits</h3>
                 <p>For every hour you stay focused and away from blocked apps, you earn 5 minutes of scroll time. Your discipline becomes currency.</p>
             </div>
             <div class="step reveal">
                 <div class="step-number">3</div>
-                <div class="step-icon">✨</div>
+                <div class="step-icon"><img src="assets/scrolly/icons/sparkles.png" alt=""></div>
                 <h3>Spend Guilt-Free</h3>
                 <p>When you genuinely want to check an app, spend your earned credits for a timed peek. No guilt. No shame. You earned it.</p>
             </div>
@@ -1951,62 +1995,62 @@
         </div>
         <div class="feature-grid">
             <a href="features.html#quiet-hours" class="feature-card reveal">
-                <div class="icon">⏰</div>
+                <div class="icon"><img src="assets/scrolly/icons/sleep.png" alt=""></div>
                 <h3>Quiet Hours <span class="feature-link">→</span></h3>
                 <p>Separate app list for scheduled blocking. Doesn't touch your wallet or protected apps. Just block and start on schedule.</p>
             </a>
             <a href="features.html#no-go-zones" class="feature-card reveal">
-                <div class="icon">🚫</div>
+                <div class="icon"><img src="assets/scrolly/icons/locked.png" alt=""></div>
                 <h3>No-Go Zones <span class="feature-link">→</span></h3>
                 <p>Layer on top of protected apps. Zero access during zone, then apps stay protected and need credits when it ends. Hard commitment.</p>
             </a>
             <a href="features.html#focus-challenges" class="feature-card reveal">
-                <div class="icon">💪</div>
+                <div class="icon"><img src="assets/scrolly/icons/strong.png" alt=""></div>
                 <h3>Focus Challenges <span class="feature-link">→</span></h3>
                 <p>Set 1-12 hour focus sessions and earn 30 bonus seconds per hour. Build winning streaks and track your progress.</p>
             </a>
             <a href="features.html#milestones" class="feature-card reveal">
-                <div class="icon">🏆</div>
+                <div class="icon"><img src="assets/scrolly/icons/trophy.png" alt=""></div>
                 <h3>Milestones <span class="feature-link">→</span></h3>
                 <p>Track your achievements, completed challenges, and hours protected. See your progress at a glance.</p>
             </a>
             <a href="features.html#progress-score" class="feature-card reveal">
-                <div class="icon">📈</div>
+                <div class="icon"><img src="assets/scrolly/icons/seedling.png" alt=""></div>
                 <h3>Progress Score <span class="feature-link">→</span></h3>
                 <p>Get a 0-100 score based on restraint, discipline, consistency, and commitment. Know exactly where you stand.</p>
             </a>
             <a href="features.html#usage-insights" class="feature-card reveal">
-                <div class="icon">📊</div>
+                <div class="icon"><img src="assets/scrolly/icons/lightbulb.png" alt=""></div>
                 <h3>Usage Insights <span class="feature-link">→</span></h3>
                 <p>See which apps you peek at most, 7-day focus trends, and behavioral patterns. Understand your habits to break them.</p>
             </a>
             <a href="features.html#emergency-tokens" class="feature-card reveal">
-                <div class="icon">🎟️</div>
+                <div class="icon"><img src="assets/scrolly/icons/gem.png" alt=""></div>
                 <h3>Emergency Tokens <span class="feature-link">→</span></h3>
                 <p>Need access right now? Emergency tokens give you instant, one-time access when life demands it.</p>
             </a>
             <a href="features.html#biometric-lock" class="feature-card reveal">
-                <div class="icon">🔐</div>
+                <div class="icon"><img src="assets/scrolly/icons/fist.png" alt=""></div>
                 <h3>Biometric Lock <span class="feature-link">→</span></h3>
                 <p>Lock your settings behind Face ID or Touch ID so your impulsive self can't undo your work.</p>
             </a>
             <a href="features.html#block-cooldown" class="feature-card reveal">
-                <div class="icon">⏳</div>
+                <div class="icon"><img src="assets/scrolly/icons/stopwatch.png" alt=""></div>
                 <h3>Block Cooldown <span class="feature-link">→</span></h3>
                 <p>Can't unblock an app on impulse. A mandatory cooldown period makes you wait it out before removing a block.</p>
             </a>
             <a href="features.html#website-blocking" class="feature-card reveal">
-                <div class="icon">🌐</div>
+                <div class="icon"><img src="assets/scrolly/icons/shield.png" alt=""></div>
                 <h3>Website Blocking <span class="feature-link">→</span></h3>
-                <p>Block Instagram app? We also block instagram.com on Safari. No workarounds, no bypassing through the browser.</p>
+                <p>Block Instagram app? We also block instagram.com in the browser. No workarounds, no bypassing through the browser.</p>
             </a>
             <a href="features.html#open-notes" class="feature-card reveal">
-                <div class="icon">📝</div>
+                <div class="icon"><img src="assets/scrolly/icons/checkmark.png" alt=""></div>
                 <h3>Open Notes <span class="feature-link">→</span></h3>
                 <p>Create quick "If this... then I'll..." rescue plans. When an urge hits, your counter-move is ready.</p>
             </a>
             <a href="features.html#daily-quotes" class="feature-card reveal">
-                <div class="icon">✨</div>
+                <div class="icon"><img src="assets/scrolly/icons/sparkles.png" alt=""></div>
                 <h3>Daily Inspiration <span class="feature-link">→</span></h3>
                 <p>Get a fresh motivational quote each day to keep you focused and remind you why you started.</p>
             </a>
@@ -2016,11 +2060,11 @@
     <!-- Privacy Section -->
     <section class="privacy">
         <div class="privacy-card reveal">
-            <div class="privacy-icon">🛡️</div>
+            <div class="privacy-icon"><img src="assets/scrolly/icons/thumbsup.png" alt=""></div>
             <div class="privacy-content">
                 <h3>Your Data Stays on Your Device. Period.</h3>
                 <p>
-                    No servers. No analytics. No tracking pixels. ScrollOff processes everything locally using Apple's Screen Time API. We literally cannot see your data, even if we wanted to.
+                    No servers. No analytics. No tracking pixels. ScrollOff processes everything locally using the system's screen-time framework. We literally cannot see your data, even if we wanted to.
                 </p>
                 <div class="privacy-badges">
                     <span class="privacy-badge">✓ 100% On-Device</span>
@@ -2139,7 +2183,7 @@
                     <span class="icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>None. Zero. Zilch. All processing happens on your device using Apple's Screen Time API. We don't have servers to store your data, and we literally cannot see what apps you use or how often.</p>
+                    <p>None. Zero. Zilch. All processing happens on your device using the system's screen-time framework. We don't have servers to store your data, and we literally cannot see what apps you use or how often.</p>
                 </div>
             </div>
             <div class="faq-item reveal">
@@ -2159,8 +2203,7 @@
         <h2 class="reveal">Ready for <span class="gradient">Guilt-Free Scroll Time?</span></h2>
         <p class="reveal">Download ScrollOff for free and start turning your focus into guilt-free screen time.</p>
         <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="btn btn-primary reveal" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-            Download for iOS - It's Free
+                        Download Free
         </a>
     </section>
 
@@ -2173,7 +2216,7 @@
                     ScrollOff
                 </div>
                 <div class="footer-copy">© 2025-2026 Sugrowth. All rights reserved.</div>
-                <div class="footer-version" title="Version 2.3 (Build 1)">v2.3-b1</div>
+                <div class="footer-version" title="Version 3.0.0 (Build 1)">v3.0.0-b1</div>
             </div>
             <div class="footer-links">
                 <a href="about.html">About</a>
@@ -2182,7 +2225,7 @@
                 <a href="support.html">Support</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Use</a>
-                <a href="mailto:sugrowth+scrolloff@gmail.com">Contact</a>
+                <a href="mailto:scrolloff@sugrowth.ca">Contact</a>
                 <a href="https://github.com/sugrowth/ScrollOff-Public" target="_blank">GitHub</a>
             </div>
         </div>
@@ -2249,33 +2292,59 @@
         });
 
         // Screenshot Carousel
-        const carouselSlides = document.getElementById('carouselSlides');
-        const dots = document.querySelectorAll('.carousel-dot');
-        let currentSlide = 0;
+        // Phone carousel with iOS / Android platform toggle
+        const platformPanes = {
+            ios: {
+                pane: document.getElementById('pane-ios'),
+                slides: document.getElementById('carouselSlides'),
+                dots: Array.from(document.querySelectorAll('#pane-ios .carousel-dot')),
+                current: 0
+            },
+            android: {
+                pane: document.getElementById('pane-android'),
+                slides: document.getElementById('carouselSlidesAndroid'),
+                dots: Array.from(document.querySelectorAll('#pane-android .carousel-dot')),
+                current: 0
+            }
+        };
+        let activePlatform = 'ios';
         let autoSlideInterval;
 
         function goToSlide(index) {
-            currentSlide = index;
-            carouselSlides.style.transform = `translateX(-${index * 100}%)`;
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
+            const c = platformPanes[activePlatform];
+            c.current = index;
+            c.slides.style.transform = `translateX(-${index * 100}%)`;
+            c.dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
         }
 
         function nextSlide() {
-            const next = (currentSlide + 1) % 12;
-            goToSlide(next);
+            const c = platformPanes[activePlatform];
+            goToSlide((c.current + 1) % c.dots.length);
         }
 
-        // Click on dots
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                goToSlide(index);
+        Object.values(platformPanes).forEach(c => {
+            c.dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                    resetAutoSlide();
+                });
+            });
+        });
+
+        document.querySelectorAll('#platformToggle button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const platform = btn.dataset.platform;
+                if (platform === activePlatform) return;
+                activePlatform = platform;
+                document.querySelectorAll('#platformToggle button').forEach(b =>
+                    b.classList.toggle('active', b === btn));
+                Object.entries(platformPanes).forEach(([name, c]) =>
+                    c.pane.classList.toggle('hidden', name !== platform));
+                goToSlide(0);
                 resetAutoSlide();
             });
         });
 
-        // Auto-advance every 4 seconds
         function startAutoSlide() {
             autoSlideInterval = setInterval(nextSlide, 4000);
         }

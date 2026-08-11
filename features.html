@@ -130,7 +130,7 @@
                     "@type": "ListItem",
                     "position": 13,
                     "name": "100% Privacy",
-                    "description": "All data stays on device. No servers, no analytics, no tracking. Uses Apple's secure Screen Time API."
+                    "description": "All data stays on device. No servers, no analytics, no tracking. Uses the system's secure screen-time framework."
                 }
             ]
         }
@@ -667,6 +667,15 @@
                 align-items: center;
             }
         }
+    
+        .icon img, .feature-icon img, .step-icon img, .feature-card .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            padding: 12%;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
@@ -676,7 +685,8 @@
             <a href="index.html" class="nav-logo">
                 <img src="assets/app-icon.png" alt="ScrollOff">
                 ScrollOff
-            </a>
+            
+                <img src="assets/scrolly/scrolly_superstar_anim.webp" alt="" class="nav-scrolly" style="width:34px;height:34px;border-radius:0;"></a>
             <div class="nav-links">
                 <a href="index.html#how">How It Works</a>
                 <a href="features.html" class="active">Features</a>
@@ -716,7 +726,7 @@
     <section class="feature-section" id="no-go-zones">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">🚫</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/locked.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">No-Go Zones</h2>
                     <p class="feature-subtitle">Absolute zero access when you need it most</p>
@@ -764,7 +774,7 @@
     <section class="feature-section" id="focus-challenges">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">💪</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/strong.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">Focus Challenges</h2>
                     <p class="feature-subtitle">Gamify your focus and earn bonus credits</p>
@@ -809,7 +819,7 @@
     <section class="feature-section" id="quiet-hours">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">🌙</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/sleep.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">Quiet Hours</h2>
                     <p class="feature-subtitle">Scheduled blocking without the pressure</p>
@@ -855,7 +865,7 @@
     <section class="feature-section" id="milestones">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">🏆</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/trophy.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">Milestones</h2>
                     <p class="feature-subtitle">Track your achievements and progress</p>
@@ -900,7 +910,7 @@
     <section class="feature-section" id="progress-score">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">📈</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/seedling.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">Progress Score</h2>
                     <p class="feature-subtitle">Your self-control quantified (0-100)</p>
@@ -945,7 +955,7 @@
     <section class="feature-section" id="open-notes">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">📝</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/checkmark.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">Open Notes</h2>
                     <p class="feature-subtitle">If-then plans for when urges hit</p>
@@ -990,7 +1000,7 @@
     <section class="feature-section" id="emergency-tokens">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">🎟️</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/gem.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">Emergency Tokens</h2>
                     <p class="feature-subtitle">Instant access when life demands it</p>
@@ -1034,7 +1044,7 @@
     <section class="feature-section" id="credit-rollover">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">📅</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/morning.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">Credit Rollover</h2>
                     <p class="feature-subtitle">Your earned time doesn't disappear at midnight</p>
@@ -1059,7 +1069,7 @@
     <section class="feature-section" id="usage-insights">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">📊</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/lightbulb.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">Usage Insights</h2>
                     <p class="feature-subtitle">Understand your patterns to break them</p>
@@ -1086,7 +1096,7 @@
     <section class="feature-section" id="biometric-lock">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">🔐</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/fist.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">Biometric Lock</h2>
                     <p class="feature-subtitle">Protect settings from your impulsive self</p>
@@ -1113,7 +1123,7 @@
     <section class="feature-section" id="block-cooldown">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">⏳</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/stopwatch.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">Block Cooldown</h2>
                     <p class="feature-subtitle">Prevent impulsive unblocking</p>
@@ -1150,29 +1160,29 @@
     <section class="feature-section" id="website-blocking">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">🌐</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/shield.png" alt=""></div>
                 <div>
-                    <h2 class="feature-title">Website Blocking on Safari</h2>
+                    <h2 class="feature-title">Website Blocking</h2>
                     <p class="feature-subtitle">Block the web version too, no bypassing</p>
                 </div>
             </div>
             <p class="feature-description">
-                When you block an app like Instagram or TikTok, ScrollOff automatically blocks the matching website (instagram.com, tiktok.com) on Safari. No loopholes, no workarounds. If you block the app, you block the site.
+                When you block an app like Instagram or TikTok, ScrollOff automatically blocks the matching website (instagram.com, tiktok.com) in the browser. No loopholes, no workarounds. If you block the app, you block the site.
             </p>
             <div class="feature-details">
                 <h4>How It Works</h4>
                 <ul class="feature-list">
                     <li><span class="check">✓</span> Automatic website blocking when you add apps to your protected list</li>
                     <li><span class="check">✓</span> Covers approximately 40 popular apps and their websites</li>
-                    <li><span class="check">✓</span> Works on Safari (Apple limitation prevents blocking on Chrome, Firefox, etc.)</li>
-                    <li><span class="check">✓</span> Blocking page shows Apple's Screen Time or ScrollOff's custom message</li>
+                    <li><span class="check">✓</span> Works in the platform's own browser (platform rules prevent blocking Chrome, Firefox, etc.)</li>
+                    <li><span class="check">✓</span> Blocking page shows the system's blocking page or ScrollOff's custom message</li>
                     <li><span class="check">✓</span> Request additional websites if your app isn't covered</li>
                 </ul>
             </div>
             <div class="use-cases">
                 <div class="use-case">
                     <div class="use-case-title">No Workarounds</div>
-                    <div class="use-case-desc">Can't just open Safari and browse Instagram when the app is blocked</div>
+                    <div class="use-case-desc">Can't just open the browser and visit Instagram when the app is blocked</div>
                 </div>
                 <div class="use-case">
                     <div class="use-case-title">Complete Protection</div>
@@ -1180,7 +1190,7 @@
                 </div>
                 <div class="use-case">
                     <div class="use-case-title">Set It and Forget It</div>
-                    <div class="use-case-desc">Block once, protect everywhere (on Safari)</div>
+                    <div class="use-case-desc">Block once, protect everywhere</div>
                 </div>
             </div>
             <span class="tier-badge free">Available in Free</span>
@@ -1191,7 +1201,7 @@
     <section class="feature-section" id="daily-quotes">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">✨</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/sparkles.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">Daily Motivational Quotes</h2>
                     <p class="feature-subtitle">Fresh inspiration every day</p>
@@ -1216,7 +1226,7 @@
     <section class="feature-section" id="mindfulness">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">🧘</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/evening.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">Mindfulness Exercises</h2>
                     <p class="feature-subtitle">Optional moment of reflection before peeks</p>
@@ -1242,14 +1252,14 @@
     <section class="feature-section" id="privacy">
         <div class="feature-content">
             <div class="feature-header">
-                <div class="feature-icon">🛡️</div>
+                <div class="feature-icon"><img src="assets/scrolly/icons/thumbsup.png" alt=""></div>
                 <div>
                     <h2 class="feature-title">100% Private</h2>
                     <p class="feature-subtitle">Your data never leaves your device</p>
                 </div>
             </div>
             <p class="feature-description">
-                ScrollOff processes everything locally using Apple's Screen Time API. <strong>We have no servers, no analytics, no tracking</strong>. We literally cannot see your data, even if we wanted to. Your usage patterns, your blocked apps, your habits - it all stays on your device.
+                ScrollOff processes everything locally using the system's screen-time framework. <strong>We have no servers, no analytics, no tracking</strong>. We literally cannot see your data, even if we wanted to. Your usage patterns, your blocked apps, your habits - it all stays on your device.
             </p>
             <div class="feature-details">
                 <h4>Privacy Guarantees</h4>
@@ -1258,7 +1268,7 @@
                     <li><span class="check">✓</span> No account required</li>
                     <li><span class="check">✓</span> No data collection whatsoever</li>
                     <li><span class="check">✓</span> No analytics or tracking pixels</li>
-                    <li><span class="check">✓</span> Uses Apple's secure Screen Time API</li>
+                    <li><span class="check">✓</span> Uses the system's secure screen-time framework</li>
                 </ul>
             </div>
             <span class="tier-badge free">All Tiers</span>
@@ -1270,8 +1280,7 @@
         <h2>Ready to Take Back Your Time?</h2>
         <p>Download ScrollOff for free and start earning guilt-free scroll time.</p>
         <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="btn" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-            Download for iOS - It's Free
+                        Download Free
         </a>
     </section>
 
@@ -1284,7 +1293,7 @@
                     ScrollOff
                 </div>
                 <div class="footer-copy">© 2025-2026 Sugrowth. All rights reserved.</div>
-                <div class="footer-version" title="Version 2.3 (Build 1)">v2.3-b1</div>
+                <div class="footer-version" title="Version 3.0.0 (Build 1)">v3.0.0-b1</div>
             </div>
             <div class="footer-links">
                 <a href="about.html">About</a>
@@ -1293,7 +1302,7 @@
                 <a href="support.html">Support</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Use</a>
-                <a href="mailto:sugrowth+scrolloff@gmail.com">Contact</a>
+                <a href="mailto:scrolloff@sugrowth.ca">Contact</a>
                 <a href="https://github.com/sugrowth/ScrollOff-Public" target="_blank">GitHub</a>
             </div>
         </div>
