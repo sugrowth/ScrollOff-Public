@@ -604,6 +604,19 @@
             backface-visibility: hidden;
         }
 
+        /* Android pane: a taller, squarer phone than the iPhone pane */
+        #pane-android .carousel-container {
+            width: calc(100% + 18px);
+            margin-left: -9px;
+            max-height: none;
+            border-radius: 22px;
+        }
+
+        #pane-android .carousel-slide img {
+            max-height: none;
+            border-radius: 22px;
+        }
+
         .platform-toggle {
             display: flex;
             gap: 8px;
