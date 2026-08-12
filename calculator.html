@@ -1136,7 +1136,7 @@
                 <div class="results-header">
                     <h2>Your Wasted Time</h2>
                     <p>Based on <span id="totalDaily">4h 30m</span> of wasted screen time daily</p>
-                    <div class="severity-badge yellow" id="severityBadge"><img src="assets/scrolly/icons/warning.png" alt="" style="width:1.15em;height:1.15em;object-fit:contain;vertical-align:-0.22em;margin-right:4px;">Moderate Concern</div>
+                    <div class="severity-badge yellow" id="severityBadge"><img src="assets/scrolly/icons/warning.webp" alt="" style="width:1.15em;height:1.15em;object-fit:contain;vertical-align:-0.22em;margin-right:4px;">Moderate Concern</div>
                 </div>
 
                 <div class="time-cards">
@@ -1162,11 +1162,11 @@
                     <h3 class="perspective-title">What You Could Do With That Time Instead</h3>
                     <div class="perspective-grid">
                         <div class="perspective-item">
-                            <span class="perspective-icon"><img src="assets/scrolly/icons/lightbulb.png" alt="" style="width:1.35em;height:1.35em;object-fit:contain;vertical-align:-0.28em;"></span>
+                            <span class="perspective-icon"><img src="assets/scrolly/icons/lightbulb.webp" alt="" style="width:1.35em;height:1.35em;object-fit:contain;vertical-align:-0.28em;"></span>
                             <span class="perspective-text">Read <strong id="books">49</strong> books per year</span>
                         </div>
                         <div class="perspective-item">
-                            <span class="perspective-icon"><img src="assets/scrolly/icons/strong.png" alt="" style="width:1.35em;height:1.35em;object-fit:contain;vertical-align:-0.28em;"></span>
+                            <span class="perspective-icon"><img src="assets/scrolly/icons/strong.webp" alt="" style="width:1.35em;height:1.35em;object-fit:contain;vertical-align:-0.28em;"></span>
                             <span class="perspective-text">Exercise <strong id="workouts">328</strong> times per year</span>
                         </div>
                         <div class="perspective-item">
@@ -1174,7 +1174,7 @@
                             <span class="perspective-text">Learn an instrument in <strong id="skillMonths">6</strong> months</span>
                         </div>
                         <div class="perspective-item">
-                            <span class="perspective-icon"><img src="assets/scrolly/icons/sleep.png" alt="" style="width:1.35em;height:1.35em;object-fit:contain;vertical-align:-0.28em;"></span>
+                            <span class="perspective-icon"><img src="assets/scrolly/icons/sleep.webp" alt="" style="width:1.35em;height:1.35em;object-fit:contain;vertical-align:-0.28em;"></span>
                             <span class="perspective-text">Get <strong id="extraSleep">2h 42m</strong> more sleep per day</span>
                         </div>
                         <div class="perspective-item">
@@ -1182,7 +1182,7 @@
                             <span class="perspective-text">Spend <strong id="familyTime">19</strong> more hours with family weekly</span>
                         </div>
                         <div class="perspective-item">
-                            <span class="perspective-icon"><img src="assets/scrolly/icons/stopwatch.png" alt="" style="width:1.35em;height:1.35em;object-fit:contain;vertical-align:-0.28em;"></span>
+                            <span class="perspective-icon"><img src="assets/scrolly/icons/stopwatch.webp" alt="" style="width:1.35em;height:1.35em;object-fit:contain;vertical-align:-0.28em;"></span>
                             <span class="perspective-text">Work on a side project for <strong id="projectHours">987</strong> hours/year</span>
                         </div>
                         <div class="perspective-item">
@@ -1190,7 +1190,7 @@
                             <span class="perspective-text">Watch <strong id="movies">493</strong> movies per year</span>
                         </div>
                         <div class="perspective-item">
-                            <span class="perspective-icon"><img src="assets/scrolly/icons/meditate.png" alt="" style="width:1.35em;height:1.35em;object-fit:contain;vertical-align:-0.28em;"></span>
+                            <span class="perspective-icon"><img src="assets/scrolly/icons/meditate.webp" alt="" style="width:1.35em;height:1.35em;object-fit:contain;vertical-align:-0.28em;"></span>
                             <span class="perspective-text">Meditate for <strong id="meditation">162</strong> minutes daily</span>
                         </div>
                     </div>
@@ -1378,28 +1378,28 @@
             if (totalMinutes <= 90) {
                 // User is at or below ideal - congratulate them!
                 badge.className = 'severity-badge green';
-                badge.innerHTML = '<img src="assets/scrolly/icons/checkmark.png" alt="" style="width:1.15em;height:1.15em;object-fit:contain;vertical-align:-0.22em;margin-right:4px;">You\'re Doing Great!';
+                badge.innerHTML = '<img src="assets/scrolly/icons/checkmark.webp" alt="" style="width:1.15em;height:1.15em;object-fit:contain;vertical-align:-0.22em;margin-right:4px;">You\'re Doing Great!';
                 whatIfTitle.textContent = 'You\'re Already Ahead!';
                 whatIfText.textContent = 'Your screen time is at or below the ideal level. Keep up the great work!';
                 savedTime.textContent = 'Ideal';
                 savedLabel.textContent = 'screen time balance';
             } else if (totalHoursDaily < 2) {
                 badge.className = 'severity-badge yellow';
-                badge.innerHTML = '<img src="assets/scrolly/icons/warning.png" alt="" style="width:1.15em;height:1.15em;object-fit:contain;vertical-align:-0.22em;margin-right:4px;">Room for Improvement';
+                badge.innerHTML = '<img src="assets/scrolly/icons/warning.webp" alt="" style="width:1.15em;height:1.15em;object-fit:contain;vertical-align:-0.22em;margin-right:4px;">Room for Improvement';
                 whatIfTitle.textContent = 'What If You Cut Your Wasted Time in Half?';
                 whatIfText.textContent = 'With ScrollOff, you could reduce regretted screen time by earning your scroll time through focus.';
                 savedTime.textContent = `${Math.round(wastedHoursYearly / 2)} hours`;
                 savedLabel.textContent = 'saved per year';
             } else if (totalHoursDaily < 4) {
                 badge.className = 'severity-badge orange';
-                badge.innerHTML = '<img src="assets/scrolly/icons/warning.png" alt="" style="width:1.15em;height:1.15em;object-fit:contain;vertical-align:-0.22em;margin-right:4px;">Moderate Concern';
+                badge.innerHTML = '<img src="assets/scrolly/icons/warning.webp" alt="" style="width:1.15em;height:1.15em;object-fit:contain;vertical-align:-0.22em;margin-right:4px;">Moderate Concern';
                 whatIfTitle.textContent = 'What If You Cut Your Wasted Time in Half?';
                 whatIfText.textContent = 'With ScrollOff, you could reduce regretted screen time by earning your scroll time through focus.';
                 savedTime.textContent = `${Math.round(wastedHoursYearly / 2)} hours`;
                 savedLabel.textContent = 'saved per year';
             } else {
                 badge.className = 'severity-badge red';
-                badge.innerHTML = '<img src="assets/scrolly/icons/warning.png" alt="" style="width:1.15em;height:1.15em;object-fit:contain;vertical-align:-0.22em;margin-right:4px;">Significant Time Loss';
+                badge.innerHTML = '<img src="assets/scrolly/icons/warning.webp" alt="" style="width:1.15em;height:1.15em;object-fit:contain;vertical-align:-0.22em;margin-right:4px;">Significant Time Loss';
                 whatIfTitle.textContent = 'What If You Cut Your Wasted Time in Half?';
                 whatIfText.textContent = 'With ScrollOff, you could reduce regretted screen time by earning your scroll time through focus.';
                 savedTime.textContent = `${Math.round(wastedHoursYearly / 2)} hours`;
