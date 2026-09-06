@@ -42,7 +42,7 @@
         "description": "Research shows 60% of screen time sessions end in regret. ScrollOff changes that. Instead of punishing you with hard limits, ScrollOff rewards your focus - earn screen time credits by staying away from distracting apps, then spend them guilt-free when YOU choose. Block any app - Instagram, TikTok, YouTube, Reddit, WhatsApp, games, Netflix, or anything stealing your attention - and transform uncontrolled scrolling into intentional, earned time. No more endless checking. No more 'just 5 more minutes' turning into an hour. No more guilt. Take back control with features like No-Go Zones, Focus Challenges, and Emergency Tokens. 100% private, all data stays on your device.",
         "applicationCategory": "LifestyleApplication",
         "applicationSubCategory": ["Productivity", "Health & Fitness", "Digital Wellness"],
-        "operatingSystem": "iOS 17.0 or later",
+        "operatingSystem": "iOS 17.0 or later, Android",
         "offers": [
             {
                 "@type": "Offer",
@@ -177,6 +177,7 @@
         "keywords": "doom scrolling, doomscrolling, stop doom scrolling, phone addiction, social media addiction, screen time app, app blocker, website blocker, safari blocker, block instagram, block tiktok, block reddit, block youtube, block games, block netflix, block snapchat, block twitter, block facebook, block instagram website, block tiktok website, block reddit website, block youtube website, website blocking safari, web blocker ios, digital detox, dopamine detox, dopamine addiction, too much screen time, reduce screen time, phone addiction help, phone addiction ruining my life, addicted to my phone, smartphone addiction, cant stop scrolling, cant stop checking phone, why do i keep picking up my phone, cant put phone down, always on phone, nomophobia, phantom vibration syndrome, phantom notifications, tired from phone, tired because of phone, always tired phone, exhausted from phone, dark circles phone, cant sleep because of phone, phone ruining my sleep, scrolling before bed, scrolling at night, blue light sleep, blue light insomnia, late night scrolling, phone in bed, phone making me anxious, phone making me depressed, phone making me sad, phone making me lonely, fomo fear of missing out, social media making me sad, social media depression, phone anxiety, screen time anxiety, phone withdrawal, anxious without phone, restless without phone, irritable without phone, phone killing my productivity, cant focus because of phone, losing focus phone, procrastinating on phone, wasting time on phone, wasting hours on phone, where did my time go, spending too much time on phone, phone distraction, phone ruining my relationship, phone ruining my marriage, ignoring family for phone, ignoring friends for phone, phubbing, phone at dinner, phone during conversation, text neck, eye strain phone, headaches from phone, neck pain phone, wrist pain phone, screen time management, focus app, productivity app, distraction blocker, attention span, short attention span, break phone addiction, mindful phone use, digital wellness, digital wellbeing, phone detox, self control app, app limiter, screen time control, mental health app, phone usage tracker, social media blocker, break bad habits, phone fatigue, digital fatigue, instagram addiction, tiktok addiction, youtube addiction, gaming addiction, scrolling addiction, reels addiction, shorts addiction, video addiction, phone break app, mindfulness app, concentration app, screen time limit, ios app blocker, iphone screen time, take back my time, reclaim my time, phone free productivity, mindless scrolling, zombie scrolling, compulsive scrolling, endless scrolling, infinite scroll addiction, notification addiction, too many notifications, constant notifications, phone wont stop ringing, block phone notifications, notification overload, checking phone constantly, obsessed with phone, phone obsession, phone habit, break phone habit, use phone less, spend less time on phone, block apps, block apps on iphone, digital minimalism, healthy phone habits, phone boundaries, set phone limits, block distracting apps, productivity killer, focus killer, information overload, social media burnout, content addiction, feeling empty after scrolling, regret after scrolling, guilt after scrolling, phone interfering with work, phone interfering with school, phone interfering with life, help me stop using my phone, how to stop phone addiction, how to break phone addiction, how to use phone less, how to stop scrolling, how to stop doom scrolling, phone control app, limit social media, limit screen time, parental control for myself, self control for phone, willpower phone, discipline phone, reward based screen time, earn screen time, guilt free screen time",
         "sameAs": [
             "https://apps.apple.com/app/scrolloff/id6755688472",
+            "https://play.google.com/store/apps/details?id=com.scrolloff.android",
             "https://github.com/sugrowth/ScrollOff-Public"
         ]
     }
@@ -434,6 +435,14 @@
             z-index: 1;
         }
 
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px;
+            animation: fadeUp 0.6s ease-out;
+        }
+
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -443,35 +452,22 @@
             padding: 8px 16px;
             border-radius: 50px;
             font-size: 0.85rem;
+            font-weight: 500;
             color: var(--teal);
-            margin-bottom: 24px;
-            animation: fadeUp 0.6s ease-out;
+            text-decoration: none;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .hero-badge:hover {
+            border-color: rgba(29, 192, 191, 0.5);
+            background: rgba(29, 192, 191, 0.16);
         }
 
         .hero-badge svg {
             width: 16px;
             height: 16px;
+            flex-shrink: 0;
             fill: var(--white);
-        }
-
-        .hero-badge-android {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(148, 163, 184, 0.08);
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            color: var(--gray-text);
-            margin-bottom: 24px;
-            margin-left: 8px;
-            animation: fadeUp 0.6s ease-out 0.05s both;
-        }
-
-        .hero-badge-android svg {
-            width: 16px;
-            height: 16px;
         }
 
         .hero-badge .dot {
@@ -556,6 +552,92 @@
         .btn svg {
             width: 20px;
             height: 20px;
+        }
+
+        /* Download menu: pick iOS or Android */
+        .download-menu {
+            position: relative;
+            display: inline-flex;
+        }
+
+        .download-toggle {
+            font-family: inherit;
+            line-height: inherit;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .btn .download-chevron {
+            width: 16px;
+            height: 16px;
+            margin-left: -2px;
+            transition: transform 0.2s ease;
+        }
+
+        .download-menu.open .download-chevron {
+            transform: rotate(180deg);
+        }
+
+        .download-options {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            min-width: 100%;
+            width: max-content;
+            padding: 8px;
+            background: var(--dark-card);
+            border: 1px solid rgba(29, 192, 191, 0.25);
+            border-radius: 20px;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5), 0 0 24px rgba(29, 192, 191, 0.12);
+            text-align: left;
+            z-index: 50;
+        }
+
+        .download-menu.open .download-options {
+            display: block;
+            animation: fadeUp 0.2s ease-out;
+        }
+
+        .download-option {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 16px;
+            border-radius: 14px;
+            color: var(--white);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+        }
+
+        .download-option:hover,
+        .download-option:focus-visible {
+            background: rgba(29, 192, 191, 0.12);
+            outline: none;
+        }
+
+        .download-option svg {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+            fill: var(--white);
+        }
+
+        .download-option-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.25;
+        }
+
+        .download-option-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .download-option-sub {
+            font-size: 0.78rem;
+            color: var(--gray-text);
         }
 
         /* Screenshot Carousel */
@@ -1511,6 +1593,7 @@
                 margin: 0 auto 32px;
             }
 
+            .hero-badges,
             .hero-actions {
                 justify-content: center;
             }
@@ -1525,8 +1608,7 @@
         }
 
         @media (max-width: 768px) {
-            .hero-badge,
-            .hero-badge-android {
+            .hero-badges {
                 display: none;
             }
 
@@ -1785,12 +1867,15 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-content">
-                <div class="hero-badge">
-                    Available now &mdash; Free
-                </div>
-                <div class="hero-badge-android">
-                    <svg viewBox="0 0 24 24"><path fill="#FBBC04" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#4285F4" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#34A853" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#EA4335" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
-                    Coming Soon on Android
+                <div class="hero-badges">
+                    <a class="hero-badge" href="https://apps.apple.com/app/scrolloff/id6755688472" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+                        Available on iOS
+                    </a>
+                    <a class="hero-badge" href="https://play.google.com/store/apps/details?id=com.scrolloff.android" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FBBC04" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#4285F4" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#34A853" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#EA4335" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+                        Available on Android
+                    </a>
                 </div>
                 <h1>
                     Guilt-Free Scroll Time.<br>
@@ -1800,9 +1885,28 @@
                     Turn your focus into guilt-free scroll time. Stay away from distracting apps, earn time credits, and use them whenever you choose - no shame, no regret.
                 </p>
                 <div class="hero-actions">
-                    <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="btn btn-primary" target="_blank">
-                                                Download Free
-                    </a>
+                    <div class="download-menu">
+                        <button type="button" class="btn btn-primary download-toggle" aria-haspopup="menu" aria-expanded="false" aria-controls="heroDownloadOptions">
+                            Download
+                            <svg class="download-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="download-options" id="heroDownloadOptions" role="menu" aria-label="Choose your platform">
+                            <a class="download-option" role="menuitem" href="https://apps.apple.com/app/scrolloff/id6755688472" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+                                <span class="download-option-text">
+                                    <span class="download-option-title">iOS</span>
+                                    <span class="download-option-sub">Download on the App Store</span>
+                                </span>
+                            </a>
+                            <a class="download-option" role="menuitem" href="https://play.google.com/store/apps/details?id=com.scrolloff.android" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FBBC04" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#4285F4" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#34A853" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#EA4335" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+                                <span class="download-option-text">
+                                    <span class="download-option-title">Android</span>
+                                    <span class="download-option-sub">Get it on Google Play</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
                     <a href="#how" class="btn btn-secondary">
                         See How It Works
                     </a>
@@ -2302,6 +2406,45 @@
             } else {
                 nav.style.borderBottomColor = 'rgba(29, 192, 191, 0.1)';
             }
+        });
+
+        // Download menu: pick iOS or Android
+        document.querySelectorAll('.download-menu').forEach(menu => {
+            const toggle = menu.querySelector('.download-toggle');
+            const items = Array.from(menu.querySelectorAll('.download-option'));
+
+            const setOpen = (open) => {
+                menu.classList.toggle('open', open);
+                toggle.setAttribute('aria-expanded', String(open));
+            };
+
+            toggle.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+
+            items.forEach(item => item.addEventListener('click', () => setOpen(false)));
+
+            menu.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    setOpen(false);
+                    toggle.focus();
+                } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    setOpen(true);
+                    const index = items.indexOf(document.activeElement);
+                    const step = e.key === 'ArrowDown' ? 1 : -1;
+                    const next = index === -1
+                        ? (step === 1 ? 0 : items.length - 1)
+                        : (index + step + items.length) % items.length;
+                    items[next].focus();
+                }
+            });
+
+            menu.addEventListener('focusout', (e) => {
+                if (!menu.contains(e.relatedTarget)) setOpen(false);
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!menu.contains(e.target)) setOpen(false);
+            });
         });
 
         // Screenshot Carousel
