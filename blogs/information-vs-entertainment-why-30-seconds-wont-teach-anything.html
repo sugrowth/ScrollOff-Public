@@ -62,6 +62,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/download-menu.css">
+    <script src="../assets/download-menu.js" defer></script>
 
     <style>
         :root {
@@ -167,8 +169,9 @@
 
         /* Blog Images */
         .blog-image {
-            width: 100%; max-width: 100%; height: auto;
-            border-radius: 12px; margin: 32px 0;
+            width: 100%; max-width: 640px; height: auto;
+            display: block; margin: 32px auto;
+            border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
 
@@ -227,7 +230,8 @@
             <a href="../index.html" class="nav-logo">
                 <img src="../assets/app-icon.png" alt="ScrollOff">
                 ScrollOff
-            </a>
+            
+                <img src="../assets/scrolly/scrolly_superstar_anim.webp" alt="" class="nav-scrolly" style="width:34px;height:34px;border-radius:0;"></a>
             <div class="nav-links">
                 <a href="../index.html#how">How It Works</a>
                 <a href="../features.html">Features</a>
@@ -235,7 +239,28 @@
                 <a href="../calculator.html">Time Wasted</a>
                 <a href="../index.html#pricing">Pricing</a>
                 <a href="../blog.html">Blog</a>
-                <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="nav-cta" target="_blank">Download</a>
+                <div class="download-menu download-menu-nav">
+                    <button type="button" class="nav-cta download-toggle" aria-haspopup="menu" aria-expanded="false">
+                        Download
+                        <svg class="download-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="download-options" role="menu" aria-label="Choose your platform">
+                        <a class="download-option" role="menuitem" href="https://apps.apple.com/app/scrolloff/id6755688472" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+                            <span class="download-option-text">
+                                <span class="download-option-title">iOS</span>
+                                <span class="download-option-sub">Download on the App Store</span>
+                            </span>
+                        </a>
+                        <a class="download-option" role="menuitem" href="https://play.google.com/store/apps/details?id=com.scrolloff.android" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FBBC04" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#4285F4" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#34A853" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#EA4335" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+                            <span class="download-option-text">
+                                <span class="download-option-title">Android</span>
+                                <span class="download-option-sub">Get it on Google Play</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -253,7 +278,10 @@
         <a href="../calculator.html">Time Wasted</a>
         <a href="../index.html#pricing" onclick="closeMenu()">Pricing</a>
         <a href="../blog.html">Blog</a>
-        <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="nav-cta" target="_blank">Download</a>
+        <div class="mobile-download">
+            <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="nav-cta" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg> Download for iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=com.scrolloff.android" class="nav-cta" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FBBC04" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#4285F4" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#34A853" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#EA4335" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg> Download for Android</a>
+        </div>
     </div>
 
     <!-- Article -->
@@ -419,10 +447,28 @@
     <section class="cta">
         <h2>Ready for <span class="gradient">Guilt-Free Scroll Time?</span></h2>
         <p>Download ScrollOff for free and start earning your screen time.</p>
-        <a href="https://apps.apple.com/app/scrolloff/id6755688472" class="btn" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-            Download for iOS. It's Free
-        </a>
+        <div class="download-menu">
+            <button type="button" class="btn download-toggle" aria-haspopup="menu" aria-expanded="false">
+                Download Free
+                <svg class="download-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="download-options" role="menu" aria-label="Choose your platform">
+                <a class="download-option" role="menuitem" href="https://apps.apple.com/app/scrolloff/id6755688472" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+                    <span class="download-option-text">
+                        <span class="download-option-title">iOS</span>
+                        <span class="download-option-sub">Download on the App Store</span>
+                    </span>
+                </a>
+                <a class="download-option" role="menuitem" href="https://play.google.com/store/apps/details?id=com.scrolloff.android" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FBBC04" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#4285F4" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#34A853" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#EA4335" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+                    <span class="download-option-text">
+                        <span class="download-option-title">Android</span>
+                        <span class="download-option-sub">Get it on Google Play</span>
+                    </span>
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- Comments -->
@@ -455,7 +501,7 @@
                     ScrollOff
                 </div>
                 <div class="footer-copy">&copy; 2025-2026 Sugrowth. All rights reserved.</div>
-                <div class="footer-version" title="Version 2.3 (Build 1)">v2.3-b1</div>
+                <div class="footer-version" title="Version 3.0.0 (Build 2)">v3.0.0-b2</div>
             </div>
             <div class="footer-links">
                 <a href="../about.html">About</a>
@@ -464,7 +510,7 @@
                 <a href="../support.html">Support</a>
                 <a href="../privacy.html">Privacy Policy</a>
                 <a href="../terms.html">Terms of Use</a>
-                <a href="mailto:sugrowth+scrolloff@gmail.com">Contact</a>
+                <a href="mailto:scrolloff@sugrowth.ca">Contact</a>
                 <a href="https://github.com/sugrowth/ScrollOff-Public" target="_blank">GitHub</a>
             </div>
         </div>
